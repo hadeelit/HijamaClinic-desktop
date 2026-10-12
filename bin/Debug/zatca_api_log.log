@@ -1,0 +1,1866 @@
+[10/11/2025 02:27:14 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMjNGNkRCMUQxRUM2NDI0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEv2/NbLb67SXyxUy00dNKOKS9uKslGM16oX9/Iv1RDRMdpIyvFSdhPPesFnShcYukyvupSCDFtFS9zNXuSCjPPKCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQC85YtNREpU6ovh9Q7WhOAZ0ViE5dPH76FW8no2SvWO9gIhALd5mUzN9yu/MuWWC+J0sQjOyhjXhjmFiJm9BtBqXj1Y"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[10/11/2025 02:28:23 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQkFDMEZEQkUzQzgxNDU1MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHLw+G31n9LtiZD0pncUIyaL1/2VL/uGn+MYH1iwU+4m25VlDigzAL+Fl7xWdSjMWNVa/WWWFF5J1Mdif3OV+T6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQD3N/UseIuqRF51+rRA/X7EGVY3jutX3Bf9ZaNbgRoSBAIhAMTuUa639FQP6M5+FAPnMMnZ3Bm5dT+IQPXtsD3vkMge"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[10/11/2025 05:36:04 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMjhFRUZBQUZDNEMzNDNCMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEoq3kbcufbYIrEaHONsnFMBWzGdRaREla6gDSXcA9N7IajQYY7F7GzIkJ/h7aQolvAECrFfm1O7vWflGMdT/isqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDDKq1IBci+R5ENS7NLtMWNhJ5vlv344qGzoFRYUDdOIgIgR2m44lyhp+fZJJBBAL4rNueT4IhP4X/DUWwq3dC89Es="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[10/11/2025 05:37:13 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/csids
+Request: {"csr":"MIICEDCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQkMyMEMyMkMyNUU3NEQzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/6LEva1hk5khMjHkrV/r2Zep8yJRiVkelJZOHtQYWggORxeOLOWPK6+N1lCd2fSOmmiAK5yHUQ815tC6iYziQaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0cAMEQCIEuR0xpYYTk5ENz0U3nPCCG6vY/8qWG7v4CmYfu4iT5gAiBh7apHYQ5/j0Ok5UB/q30i3R2ePy0VUTicEWUYrMRrvA=="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[10/11/2025 05:38:46 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICDzCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMEY2MTQwNUUxMkM5NDBGMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELU7GOUYmNQiR221V9NnG7xpQDSsLLUy0d1t6zXdCLEBEkuW6IkL6nElxU02gLEI07V2yYr6+Utc/NmzzRCUZh6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0YAMEMCH2NObP45j48+L1RN7y8XXWR5p3/jDgFwUR7Fh0tAM70CIEzdHDyVnc20wDY9UKaXisj0T4bXo0e7fz1oX1x0ROiX"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[10/11/2025 07:08:04 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMkY1QkFEQjhGQUIyNDBCMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQlxG5lvUmocf44UDJXtg69XCiXiJM6xKgQv0rdxgEkXA4kTNhCqmYcROaRgBHY9sLcjfGuabPvszZ1z5sFBBQ6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQC9L3mZHVQ8OmihIezPV/BsOSLf/9SmVyGl+LT82WCIzgIgEVZJYH2L2pghswYBqyngDm9lq/Qbj7JxOvIQxnRbXUs="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[10/11/2025 08:57:47 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNTU1RUQ1OTk3Q0JCNEVFMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwuiDHsRamnc8tUSyCq2b9tDupQlZGs+xrS6yklKOWtwpgA3iHHOoyRIgspSpXzKMyDOxjgWFFGqcdqHfW/9yPqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIBXFwfUlfwcqdwlwPPbYagrZygCBY3KnQqK2yJB1GoioAiEA4y53M88PVV1HuLwX3o03hRBmldzxJlNx577dVGdvgmM="}
+Status: 200 OK
+Response: <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title> Request Rejected </title>
+    <link rel="shortcut icon"
+        href="https://zatca.gov.sa//Style%20Library/GAZTinternet/img/favicons/apple-touch-icon.png"
+        type="image/vnd.microsoft.icon" id="favicon" />
+
+    <style>
+        /* Font-face rule to define the custom font */
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-Regular.eot');
+            src: url('fonts/Somar-Regular.eot?') format('embedded-opentype'),
+                url('fonts/Somar-Regular.woff2') format('woff2'),
+                url('fonts/Somar-Regular.woff') format('woff'),
+                url('fonts/Somar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-SemiBold.eot');
+            src: url('fonts/Somar-SemiBold.eot') format('embedded-opentype'),
+                url('fonts/Somar-SemiBold.woff2') format('woff2'),
+                url('fonts/Somar-SemiBold.woff') format('woff'),
+                url('fonts/Somar-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* CSS styles */
+        body {
+            font-family: 'Somar', sans-serif !important;
+            /* Custom font */
+            margin: 0;
+            padding: 0;
+            background-color: #1D3761;
+
+        }
+
+        /* Start Helpers Classes */
+        .container {
+            max-width: 1022px;
+            margin: auto;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .dir-ar {
+            direction: rtl;
+        }
+
+        /* End Helpers Classes */
+
+        header {
+            height: 100px;
+        }
+
+        header .logo img {
+            height: 80px;
+            max-width: 245px;
+            margin: 10px 0;
+        }
+
+        .info {
+            padding: 5rem 0;
+
+        }
+
+        .info h2 {
+            font-size: 28px;
+            color: #4FBBBD;
+
+        }
+
+        .info p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        .info p a {
+            color: #63c3c4;
+            text-decoration: none;
+        }
+
+        .info p a:hover {
+            color: #0996D4;
+            text-decoration: none;
+        }
+
+        .info hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 4rem 0;
+        }
+
+
+        .actions .submit-action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background: linear-gradient(rgba(25, 87, 157, 0.2) 100%, rgba(24, 134, 196, 0.2) 100%)
+        }
+
+        .actions .submit-action p {
+            color: #fff;
+        }
+
+        .actions .submit-action a {
+            transition: all .3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            background-color: #0996D4;
+            border: 1px solid transparent;
+            width: 18%;
+            padding: 10px 0;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .actions .submit-action a:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1200px) {
+            body {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 460px;
+                padding: 0 20px;
+            }
+
+            .info p a {
+                display: block;
+            }
+
+            .actions .submit-action {
+                justify-content: center;
+            }
+
+            .actions .submit-action p {
+                font-size: .8em;
+            }
+
+            .actions .submit-action a {
+                width: 40%;
+                margin: auto;
+                padding: 8px;
+                font-size: .8em;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <header>
+        <div class="logo">
+            <div class="container">
+                <a href="/" title="الرئيسية">
+                   <img alt="zatca logo" src="https://eservices.zatca.gov.sa/sites/sc/ar/pages/_layouts/15/1025/images/zatcaRevamp/new_logo.svg" />
+
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <h2>Sorry for inconvenience </h2>
+            <p>Something went wrong in your request, please provide us with the used service information by sending the
+                support ID 4555152991899673654
+                    to the below page in ZATCA webpage : <br> <a
+                        href="https://zatca.gov.sa/en/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                        target="_blank">Contact us >> Complaints and Suggestions >> Raise Request.</a>
+            </p>
+
+            <hr />
+            <div class="dir-ar">
+                <h2>نأسف للإزعاج</h2>
+                <p>حدث خطأ في طلبك نرجو تزويدنا بمعلومات الخدمة المستخدمة عن طريق إرسال رقم الدعم
+                    4555152991899673654
+                        عبر الدخول على الصفحة التالية في بوابة الهيئة: <br> <a
+                            href="https://zatca.gov.sa/ar/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                            target="_blank">اتصل بنا >> الشكاوى والاقتراحات >> طلب.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+[10/11/2025 09:18:48 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMTg4RTZBMDRDQzc4NENCMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwEQe/p8G49U0qQqHvTqhjIn2qUvIJqPNpIiZ2oRnwOnSmt+O0gfFBD57QPckGJIKFopLy1wREI4fLeSIgYtK0aCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQDzGFqSnx09huwZ/04X0IydRyuTycSQDXm9n5r5k9mEfQIhAL808JxAxO44da5jqQvWM/jClsvsV/u0zRMoCe8Vl1Hy"}
+Status: 200 OK
+Response: <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title> Request Rejected </title>
+    <link rel="shortcut icon"
+        href="https://zatca.gov.sa//Style%20Library/GAZTinternet/img/favicons/apple-touch-icon.png"
+        type="image/vnd.microsoft.icon" id="favicon" />
+
+    <style>
+        /* Font-face rule to define the custom font */
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-Regular.eot');
+            src: url('fonts/Somar-Regular.eot?') format('embedded-opentype'),
+                url('fonts/Somar-Regular.woff2') format('woff2'),
+                url('fonts/Somar-Regular.woff') format('woff'),
+                url('fonts/Somar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-SemiBold.eot');
+            src: url('fonts/Somar-SemiBold.eot') format('embedded-opentype'),
+                url('fonts/Somar-SemiBold.woff2') format('woff2'),
+                url('fonts/Somar-SemiBold.woff') format('woff'),
+                url('fonts/Somar-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* CSS styles */
+        body {
+            font-family: 'Somar', sans-serif !important;
+            /* Custom font */
+            margin: 0;
+            padding: 0;
+            background-color: #1D3761;
+
+        }
+
+        /* Start Helpers Classes */
+        .container {
+            max-width: 1022px;
+            margin: auto;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .dir-ar {
+            direction: rtl;
+        }
+
+        /* End Helpers Classes */
+
+        header {
+            height: 100px;
+        }
+
+        header .logo img {
+            height: 80px;
+            max-width: 245px;
+            margin: 10px 0;
+        }
+
+        .info {
+            padding: 5rem 0;
+
+        }
+
+        .info h2 {
+            font-size: 28px;
+            color: #4FBBBD;
+
+        }
+
+        .info p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        .info p a {
+            color: #63c3c4;
+            text-decoration: none;
+        }
+
+        .info p a:hover {
+            color: #0996D4;
+            text-decoration: none;
+        }
+
+        .info hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 4rem 0;
+        }
+
+
+        .actions .submit-action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background: linear-gradient(rgba(25, 87, 157, 0.2) 100%, rgba(24, 134, 196, 0.2) 100%)
+        }
+
+        .actions .submit-action p {
+            color: #fff;
+        }
+
+        .actions .submit-action a {
+            transition: all .3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            background-color: #0996D4;
+            border: 1px solid transparent;
+            width: 18%;
+            padding: 10px 0;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .actions .submit-action a:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1200px) {
+            body {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 460px;
+                padding: 0 20px;
+            }
+
+            .info p a {
+                display: block;
+            }
+
+            .actions .submit-action {
+                justify-content: center;
+            }
+
+            .actions .submit-action p {
+                font-size: .8em;
+            }
+
+            .actions .submit-action a {
+                width: 40%;
+                margin: auto;
+                padding: 8px;
+                font-size: .8em;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <header>
+        <div class="logo">
+            <div class="container">
+                <a href="/" title="الرئيسية">
+                   <img alt="zatca logo" src="https://eservices.zatca.gov.sa/sites/sc/ar/pages/_layouts/15/1025/images/zatcaRevamp/new_logo.svg" />
+
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <h2>Sorry for inconvenience </h2>
+            <p>Something went wrong in your request, please provide us with the used service information by sending the
+                support ID 4555152991899131569
+                    to the below page in ZATCA webpage : <br> <a
+                        href="https://zatca.gov.sa/en/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                        target="_blank">Contact us >> Complaints and Suggestions >> Raise Request.</a>
+            </p>
+
+            <hr />
+            <div class="dir-ar">
+                <h2>نأسف للإزعاج</h2>
+                <p>حدث خطأ في طلبك نرجو تزويدنا بمعلومات الخدمة المستخدمة عن طريق إرسال رقم الدعم
+                    4555152991899131569
+                        عبر الدخول على الصفحة التالية في بوابة الهيئة: <br> <a
+                            href="https://zatca.gov.sa/ar/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                            target="_blank">اتصل بنا >> الشكاوى والاقتراحات >> طلب.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+[10/11/2025 09:19:18 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMjY0OTVFNUUwQkRENDg1MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/IsIr83HNb2d96+ir8u4tdrS1rAK5YbPjQjr6CY5ESiOYmXoCqSpVkg0IyI4QaYXxljyHjShgTjHquhQDRC59aCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQCmvWxgTF+aTmg2yFnZnpLEJxRnmjkTNB7koh2VoVUzzQIhAIazWuqWn8UHBy8rHDGiw+sXg9OPSdSVUGa0lbQrJhBF"}
+Status: 200 OK
+Response: <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title> Request Rejected </title>
+    <link rel="shortcut icon"
+        href="https://zatca.gov.sa//Style%20Library/GAZTinternet/img/favicons/apple-touch-icon.png"
+        type="image/vnd.microsoft.icon" id="favicon" />
+
+    <style>
+        /* Font-face rule to define the custom font */
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-Regular.eot');
+            src: url('fonts/Somar-Regular.eot?') format('embedded-opentype'),
+                url('fonts/Somar-Regular.woff2') format('woff2'),
+                url('fonts/Somar-Regular.woff') format('woff'),
+                url('fonts/Somar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-SemiBold.eot');
+            src: url('fonts/Somar-SemiBold.eot') format('embedded-opentype'),
+                url('fonts/Somar-SemiBold.woff2') format('woff2'),
+                url('fonts/Somar-SemiBold.woff') format('woff'),
+                url('fonts/Somar-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* CSS styles */
+        body {
+            font-family: 'Somar', sans-serif !important;
+            /* Custom font */
+            margin: 0;
+            padding: 0;
+            background-color: #1D3761;
+
+        }
+
+        /* Start Helpers Classes */
+        .container {
+            max-width: 1022px;
+            margin: auto;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .dir-ar {
+            direction: rtl;
+        }
+
+        /* End Helpers Classes */
+
+        header {
+            height: 100px;
+        }
+
+        header .logo img {
+            height: 80px;
+            max-width: 245px;
+            margin: 10px 0;
+        }
+
+        .info {
+            padding: 5rem 0;
+
+        }
+
+        .info h2 {
+            font-size: 28px;
+            color: #4FBBBD;
+
+        }
+
+        .info p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        .info p a {
+            color: #63c3c4;
+            text-decoration: none;
+        }
+
+        .info p a:hover {
+            color: #0996D4;
+            text-decoration: none;
+        }
+
+        .info hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 4rem 0;
+        }
+
+
+        .actions .submit-action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background: linear-gradient(rgba(25, 87, 157, 0.2) 100%, rgba(24, 134, 196, 0.2) 100%)
+        }
+
+        .actions .submit-action p {
+            color: #fff;
+        }
+
+        .actions .submit-action a {
+            transition: all .3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            background-color: #0996D4;
+            border: 1px solid transparent;
+            width: 18%;
+            padding: 10px 0;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .actions .submit-action a:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1200px) {
+            body {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 460px;
+                padding: 0 20px;
+            }
+
+            .info p a {
+                display: block;
+            }
+
+            .actions .submit-action {
+                justify-content: center;
+            }
+
+            .actions .submit-action p {
+                font-size: .8em;
+            }
+
+            .actions .submit-action a {
+                width: 40%;
+                margin: auto;
+                padding: 8px;
+                font-size: .8em;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <header>
+        <div class="logo">
+            <div class="container">
+                <a href="/" title="الرئيسية">
+                   <img alt="zatca logo" src="https://eservices.zatca.gov.sa/sites/sc/ar/pages/_layouts/15/1025/images/zatcaRevamp/new_logo.svg" />
+
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <h2>Sorry for inconvenience </h2>
+            <p>Something went wrong in your request, please provide us with the used service information by sending the
+                support ID 4555152991899803894
+                    to the below page in ZATCA webpage : <br> <a
+                        href="https://zatca.gov.sa/en/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                        target="_blank">Contact us >> Complaints and Suggestions >> Raise Request.</a>
+            </p>
+
+            <hr />
+            <div class="dir-ar">
+                <h2>نأسف للإزعاج</h2>
+                <p>حدث خطأ في طلبك نرجو تزويدنا بمعلومات الخدمة المستخدمة عن طريق إرسال رقم الدعم
+                    4555152991899803894
+                        عبر الدخول على الصفحة التالية في بوابة الهيئة: <br> <a
+                            href="https://zatca.gov.sa/ar/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                            target="_blank">اتصل بنا >> الشكاوى والاقتراحات >> طلب.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+[10/11/2025 09:21:06 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtREE3NTZGMzVGMTUzNDZBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEapOS5wsbnzgHOz+VtwpL2ZyPfcowxeItB2HAb1XBM2CJtf2nu4I+VwQDMYDDFKSlOE2kyZigP3HxCCSJW5gRl6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIA13+nctEFTlclWTtF1jKHD4tsWv+d+H7Tv7SpijCNM2AiEA8V39C37OBGzpqWNVhvNn9IWUCQnfS/EOqoxnkqlV7/4="}
+Status: 200 OK
+Response: <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title> Request Rejected </title>
+    <link rel="shortcut icon"
+        href="https://zatca.gov.sa//Style%20Library/GAZTinternet/img/favicons/apple-touch-icon.png"
+        type="image/vnd.microsoft.icon" id="favicon" />
+
+    <style>
+        /* Font-face rule to define the custom font */
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-Regular.eot');
+            src: url('fonts/Somar-Regular.eot?') format('embedded-opentype'),
+                url('fonts/Somar-Regular.woff2') format('woff2'),
+                url('fonts/Somar-Regular.woff') format('woff'),
+                url('fonts/Somar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-SemiBold.eot');
+            src: url('fonts/Somar-SemiBold.eot') format('embedded-opentype'),
+                url('fonts/Somar-SemiBold.woff2') format('woff2'),
+                url('fonts/Somar-SemiBold.woff') format('woff'),
+                url('fonts/Somar-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* CSS styles */
+        body {
+            font-family: 'Somar', sans-serif !important;
+            /* Custom font */
+            margin: 0;
+            padding: 0;
+            background-color: #1D3761;
+
+        }
+
+        /* Start Helpers Classes */
+        .container {
+            max-width: 1022px;
+            margin: auto;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .dir-ar {
+            direction: rtl;
+        }
+
+        /* End Helpers Classes */
+
+        header {
+            height: 100px;
+        }
+
+        header .logo img {
+            height: 80px;
+            max-width: 245px;
+            margin: 10px 0;
+        }
+
+        .info {
+            padding: 5rem 0;
+
+        }
+
+        .info h2 {
+            font-size: 28px;
+            color: #4FBBBD;
+
+        }
+
+        .info p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        .info p a {
+            color: #63c3c4;
+            text-decoration: none;
+        }
+
+        .info p a:hover {
+            color: #0996D4;
+            text-decoration: none;
+        }
+
+        .info hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 4rem 0;
+        }
+
+
+        .actions .submit-action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background: linear-gradient(rgba(25, 87, 157, 0.2) 100%, rgba(24, 134, 196, 0.2) 100%)
+        }
+
+        .actions .submit-action p {
+            color: #fff;
+        }
+
+        .actions .submit-action a {
+            transition: all .3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            background-color: #0996D4;
+            border: 1px solid transparent;
+            width: 18%;
+            padding: 10px 0;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .actions .submit-action a:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1200px) {
+            body {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 460px;
+                padding: 0 20px;
+            }
+
+            .info p a {
+                display: block;
+            }
+
+            .actions .submit-action {
+                justify-content: center;
+            }
+
+            .actions .submit-action p {
+                font-size: .8em;
+            }
+
+            .actions .submit-action a {
+                width: 40%;
+                margin: auto;
+                padding: 8px;
+                font-size: .8em;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <header>
+        <div class="logo">
+            <div class="container">
+                <a href="/" title="الرئيسية">
+                   <img alt="zatca logo" src="https://eservices.zatca.gov.sa/sites/sc/ar/pages/_layouts/15/1025/images/zatcaRevamp/new_logo.svg" />
+
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <h2>Sorry for inconvenience </h2>
+            <p>Something went wrong in your request, please provide us with the used service information by sending the
+                support ID 4766932756909651508
+                    to the below page in ZATCA webpage : <br> <a
+                        href="https://zatca.gov.sa/en/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                        target="_blank">Contact us >> Complaints and Suggestions >> Raise Request.</a>
+            </p>
+
+            <hr />
+            <div class="dir-ar">
+                <h2>نأسف للإزعاج</h2>
+                <p>حدث خطأ في طلبك نرجو تزويدنا بمعلومات الخدمة المستخدمة عن طريق إرسال رقم الدعم
+                    4766932756909651508
+                        عبر الدخول على الصفحة التالية في بوابة الهيئة: <br> <a
+                            href="https://zatca.gov.sa/ar/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                            target="_blank">اتصل بنا >> الشكاوى والاقتراحات >> طلب.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+[10/11/2025 09:21:25 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMjU2RTkyMkQxQTAwNEJBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZUuAKiSH6BP6M9zH6EtrjxYLPfnHG40K/sUKn+z28MQvht6rR1pE9Rh0xxMDkdupgnLqmgxaX65Zrk9WPETfW6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDWOTUhpaGB7tBbpjcTVkj+S8ytvX6wrd90ZHyZVeNhMgIgHzkDlmS1ERea+29sHD2Nj5AH2VRhJBN0DrUECfgVDR8="}
+Status: 200 OK
+Response: <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title> Request Rejected </title>
+    <link rel="shortcut icon"
+        href="https://zatca.gov.sa//Style%20Library/GAZTinternet/img/favicons/apple-touch-icon.png"
+        type="image/vnd.microsoft.icon" id="favicon" />
+
+    <style>
+        /* Font-face rule to define the custom font */
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-Regular.eot');
+            src: url('fonts/Somar-Regular.eot?') format('embedded-opentype'),
+                url('fonts/Somar-Regular.woff2') format('woff2'),
+                url('fonts/Somar-Regular.woff') format('woff'),
+                url('fonts/Somar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-SemiBold.eot');
+            src: url('fonts/Somar-SemiBold.eot') format('embedded-opentype'),
+                url('fonts/Somar-SemiBold.woff2') format('woff2'),
+                url('fonts/Somar-SemiBold.woff') format('woff'),
+                url('fonts/Somar-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* CSS styles */
+        body {
+            font-family: 'Somar', sans-serif !important;
+            /* Custom font */
+            margin: 0;
+            padding: 0;
+            background-color: #1D3761;
+
+        }
+
+        /* Start Helpers Classes */
+        .container {
+            max-width: 1022px;
+            margin: auto;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .dir-ar {
+            direction: rtl;
+        }
+
+        /* End Helpers Classes */
+
+        header {
+            height: 100px;
+        }
+
+        header .logo img {
+            height: 80px;
+            max-width: 245px;
+            margin: 10px 0;
+        }
+
+        .info {
+            padding: 5rem 0;
+
+        }
+
+        .info h2 {
+            font-size: 28px;
+            color: #4FBBBD;
+
+        }
+
+        .info p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        .info p a {
+            color: #63c3c4;
+            text-decoration: none;
+        }
+
+        .info p a:hover {
+            color: #0996D4;
+            text-decoration: none;
+        }
+
+        .info hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 4rem 0;
+        }
+
+
+        .actions .submit-action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background: linear-gradient(rgba(25, 87, 157, 0.2) 100%, rgba(24, 134, 196, 0.2) 100%)
+        }
+
+        .actions .submit-action p {
+            color: #fff;
+        }
+
+        .actions .submit-action a {
+            transition: all .3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            background-color: #0996D4;
+            border: 1px solid transparent;
+            width: 18%;
+            padding: 10px 0;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .actions .submit-action a:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1200px) {
+            body {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 460px;
+                padding: 0 20px;
+            }
+
+            .info p a {
+                display: block;
+            }
+
+            .actions .submit-action {
+                justify-content: center;
+            }
+
+            .actions .submit-action p {
+                font-size: .8em;
+            }
+
+            .actions .submit-action a {
+                width: 40%;
+                margin: auto;
+                padding: 8px;
+                font-size: .8em;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <header>
+        <div class="logo">
+            <div class="container">
+                <a href="/" title="الرئيسية">
+                   <img alt="zatca logo" src="https://eservices.zatca.gov.sa/sites/sc/ar/pages/_layouts/15/1025/images/zatcaRevamp/new_logo.svg" />
+
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <h2>Sorry for inconvenience </h2>
+            <p>Something went wrong in your request, please provide us with the used service information by sending the
+                support ID 4766932756906158321
+                    to the below page in ZATCA webpage : <br> <a
+                        href="https://zatca.gov.sa/en/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                        target="_blank">Contact us >> Complaints and Suggestions >> Raise Request.</a>
+            </p>
+
+            <hr />
+            <div class="dir-ar">
+                <h2>نأسف للإزعاج</h2>
+                <p>حدث خطأ في طلبك نرجو تزويدنا بمعلومات الخدمة المستخدمة عن طريق إرسال رقم الدعم
+                    4766932756906158321
+                        عبر الدخول على الصفحة التالية في بوابة الهيئة: <br> <a
+                            href="https://zatca.gov.sa/ar/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                            target="_blank">اتصل بنا >> الشكاوى والاقتراحات >> طلب.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+[11/11/2025 05:09:45 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMEU3NzA0MDgwMjRCNEQ2MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE3aun+4AH/WHkE37loVP+s7XGU1zHwcCF/lXudj9Y3vzbQ73OseTTlHm7bpCzzN3w0/zNMnuo3rATlMocseqlgqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQCgrZJQYsqR2RXgfO+EbN+TmHokBlF6twr/KfxsDeGK8QIhAN9Pf88ymPCuSX7vRiS0t7TrU/+vHuz55y0J8YrBuBB5"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[11/11/2025 05:11:49 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtRTJFRTZFN0ZEOTA4NERBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEm+NGGujqwn4vHJPUqjlpM3/00sZXAS65Gb6D6NtfPP7I7M50hk55bF15XK2DRtYanmkSMaHe5t+M65rJGdPd6qCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQDPyp5TgH9X+hQnXAEjYKyT1BtJZjVEIVwut2tRcfa0kQIhALvavkNB6d/7r8414t70rvzayptoNlP8JyKQYvGev4bV"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[11/11/2025 05:14:55 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQTY5QjZBODY3QzBDNDIyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEP2xRdLJV7vGJFO09arRmM72moea67pUIJnFdHVKulw0zIGPx8rPt4Q1sPxuMQ9Ki/lUUeKqnQzeO5zxyMA95aqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQCXhKqM7bGG0E0yibEfjbyHunKGH6Pwuzjfx67M6782UQIgUXeup+WqsptDdi7vANl9x27xJ1KHeebpmtriQFdUlbc="}
+Status: 200 OK
+Response: <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title> Request Rejected </title>
+    <link rel="shortcut icon"
+        href="https://zatca.gov.sa//Style%20Library/GAZTinternet/img/favicons/apple-touch-icon.png"
+        type="image/vnd.microsoft.icon" id="favicon" />
+
+    <style>
+        /* Font-face rule to define the custom font */
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-Regular.eot');
+            src: url('fonts/Somar-Regular.eot?') format('embedded-opentype'),
+                url('fonts/Somar-Regular.woff2') format('woff2'),
+                url('fonts/Somar-Regular.woff') format('woff'),
+                url('fonts/Somar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-SemiBold.eot');
+            src: url('fonts/Somar-SemiBold.eot') format('embedded-opentype'),
+                url('fonts/Somar-SemiBold.woff2') format('woff2'),
+                url('fonts/Somar-SemiBold.woff') format('woff'),
+                url('fonts/Somar-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* CSS styles */
+        body {
+            font-family: 'Somar', sans-serif !important;
+            /* Custom font */
+            margin: 0;
+            padding: 0;
+            background-color: #1D3761;
+
+        }
+
+        /* Start Helpers Classes */
+        .container {
+            max-width: 1022px;
+            margin: auto;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .dir-ar {
+            direction: rtl;
+        }
+
+        /* End Helpers Classes */
+
+        header {
+            height: 100px;
+        }
+
+        header .logo img {
+            height: 80px;
+            max-width: 245px;
+            margin: 10px 0;
+        }
+
+        .info {
+            padding: 5rem 0;
+
+        }
+
+        .info h2 {
+            font-size: 28px;
+            color: #4FBBBD;
+
+        }
+
+        .info p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        .info p a {
+            color: #63c3c4;
+            text-decoration: none;
+        }
+
+        .info p a:hover {
+            color: #0996D4;
+            text-decoration: none;
+        }
+
+        .info hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 4rem 0;
+        }
+
+
+        .actions .submit-action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background: linear-gradient(rgba(25, 87, 157, 0.2) 100%, rgba(24, 134, 196, 0.2) 100%)
+        }
+
+        .actions .submit-action p {
+            color: #fff;
+        }
+
+        .actions .submit-action a {
+            transition: all .3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            background-color: #0996D4;
+            border: 1px solid transparent;
+            width: 18%;
+            padding: 10px 0;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .actions .submit-action a:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1200px) {
+            body {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 460px;
+                padding: 0 20px;
+            }
+
+            .info p a {
+                display: block;
+            }
+
+            .actions .submit-action {
+                justify-content: center;
+            }
+
+            .actions .submit-action p {
+                font-size: .8em;
+            }
+
+            .actions .submit-action a {
+                width: 40%;
+                margin: auto;
+                padding: 8px;
+                font-size: .8em;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <header>
+        <div class="logo">
+            <div class="container">
+                <a href="/" title="الرئيسية">
+                   <img alt="zatca logo" src="https://eservices.zatca.gov.sa/sites/sc/ar/pages/_layouts/15/1025/images/zatcaRevamp/new_logo.svg" />
+
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <h2>Sorry for inconvenience </h2>
+            <p>Something went wrong in your request, please provide us with the used service information by sending the
+                support ID 12125608028831548693
+                    to the below page in ZATCA webpage : <br> <a
+                        href="https://zatca.gov.sa/en/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                        target="_blank">Contact us >> Complaints and Suggestions >> Raise Request.</a>
+            </p>
+
+            <hr />
+            <div class="dir-ar">
+                <h2>نأسف للإزعاج</h2>
+                <p>حدث خطأ في طلبك نرجو تزويدنا بمعلومات الخدمة المستخدمة عن طريق إرسال رقم الدعم
+                    12125608028831548693
+                        عبر الدخول على الصفحة التالية في بوابة الهيئة: <br> <a
+                            href="https://zatca.gov.sa/ar/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                            target="_blank">اتصل بنا >> الشكاوى والاقتراحات >> طلب.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+[11/11/2025 05:20:20 م] GetComplianceCSID
+Endpoint: https://fatoora.zatca.gov.sa/onboard-solution/compliance
+Request: {"csr":"MIICEDCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtOUM2NENCRTEyRTdGNEEwMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERh7acWGjy2LbcL0lhyB7RFJP5gie1pvYKlX74Ef8Occ5tdl6VlM8s6lr4Z/YanDwRcdUARb5DwFBkggJxaqil6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0cAMEQCIGA2MexnE7mmAPkpUb+Q3Bf+9Xs3LlHfG9GYMYvp/gIdAiAJ4WwciBGrmzUSbQJXVGEThDH63BUA13wEsihWNy+fdA=="}
+Status: 200 OK
+Response: <!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title> Request Rejected </title>
+    <link rel="shortcut icon"
+        href="https://zatca.gov.sa//Style%20Library/GAZTinternet/img/favicons/apple-touch-icon.png"
+        type="image/vnd.microsoft.icon" id="favicon" />
+
+    <style>
+        /* Font-face rule to define the custom font */
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-Regular.eot');
+            src: url('fonts/Somar-Regular.eot?') format('embedded-opentype'),
+                url('fonts/Somar-Regular.woff2') format('woff2'),
+                url('fonts/Somar-Regular.woff') format('woff'),
+                url('fonts/Somar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Somar';
+            src: url('fonts/Somar-SemiBold.eot');
+            src: url('fonts/Somar-SemiBold.eot') format('embedded-opentype'),
+                url('fonts/Somar-SemiBold.woff2') format('woff2'),
+                url('fonts/Somar-SemiBold.woff') format('woff'),
+                url('fonts/Somar-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* CSS styles */
+        body {
+            font-family: 'Somar', sans-serif !important;
+            /* Custom font */
+            margin: 0;
+            padding: 0;
+            background-color: #1D3761;
+
+        }
+
+        /* Start Helpers Classes */
+        .container {
+            max-width: 1022px;
+            margin: auto;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .dir-ar {
+            direction: rtl;
+        }
+
+        /* End Helpers Classes */
+
+        header {
+            height: 100px;
+        }
+
+        header .logo img {
+            height: 80px;
+            max-width: 245px;
+            margin: 10px 0;
+        }
+
+        .info {
+            padding: 5rem 0;
+
+        }
+
+        .info h2 {
+            font-size: 28px;
+            color: #4FBBBD;
+
+        }
+
+        .info p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        .info p a {
+            color: #63c3c4;
+            text-decoration: none;
+        }
+
+        .info p a:hover {
+            color: #0996D4;
+            text-decoration: none;
+        }
+
+        .info hr {
+            border: none;
+            height: 2px;
+            background-color: #fff;
+            margin: 4rem 0;
+        }
+
+
+        .actions .submit-action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            border-radius: 15px;
+            background: linear-gradient(rgba(25, 87, 157, 0.2) 100%, rgba(24, 134, 196, 0.2) 100%)
+        }
+
+        .actions .submit-action p {
+            color: #fff;
+        }
+
+        .actions .submit-action a {
+            transition: all .3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            background-color: #0996D4;
+            border: 1px solid transparent;
+            width: 18%;
+            padding: 10px 0;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+
+        .actions .submit-action a:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1200px) {
+            body {
+                text-align: center;
+            }
+
+            .container {
+                max-width: 460px;
+                padding: 0 20px;
+            }
+
+            .info p a {
+                display: block;
+            }
+
+            .actions .submit-action {
+                justify-content: center;
+            }
+
+            .actions .submit-action p {
+                font-size: .8em;
+            }
+
+            .actions .submit-action a {
+                width: 40%;
+                margin: auto;
+                padding: 8px;
+                font-size: .8em;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <header>
+        <div class="logo">
+            <div class="container">
+                <a href="/" title="الرئيسية">
+                   <img alt="zatca logo" src="https://eservices.zatca.gov.sa/sites/sc/ar/pages/_layouts/15/1025/images/zatcaRevamp/new_logo.svg" />
+
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <h2>Sorry for inconvenience </h2>
+            <p>Something went wrong in your request, please provide us with the used service information by sending the
+                support ID 14630490718873488528
+                    to the below page in ZATCA webpage : <br> <a
+                        href="https://zatca.gov.sa/en/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                        target="_blank">Contact us >> Complaints and Suggestions >> Raise Request.</a>
+            </p>
+
+            <hr />
+            <div class="dir-ar">
+                <h2>نأسف للإزعاج</h2>
+                <p>حدث خطأ في طلبك نرجو تزويدنا بمعلومات الخدمة المستخدمة عن طريق إرسال رقم الدعم
+                    14630490718873488528
+                        عبر الدخول على الصفحة التالية في بوابة الهيئة: <br> <a
+                            href="https://zatca.gov.sa/ar/ContactUs/Pages/SuggestionComplaint.aspx#topic_Request"
+                            target="_blank">اتصل بنا >> الشكاوى والاقتراحات >> طلب.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+[11/11/2025 05:26:43 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMjdCQTFDNDM0QzYzNDRDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE3TUvxTbEkazUCMsJOaCj0SlEJnAErpiJBZC3rYfRp5YoZ3i8iVBvEtaku6wtc2AUp1LSZngRSg2Bz3tzBct4fqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQCtbgGcTGas3JXyUJvBcVZv5YO1khAU9785IOvOcm6WcwIhAOFaJEadsRT3+YWGk1i9Xc8cW+TM16VSnbZp1WHJJ2gt"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[12/11/2025 04:21:16 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMTJCNkYyRDk0M0QwNDEzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE93JqTFR739N/Fpo8u/NW8wp3lUcnKrlzH29AzbcHK0HzRi2uMVu1nsZ1z463eGEvcrcO48fFKLpMygdEGcpoMaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQCOFpB2j1oLZzfE9w9eQGBmWCuLT+vwRK863ozk99PtfwIgXxUechBmw1RxZYVChXtdowELeXyKeG5NKHqIEBCkoZc="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[12/11/2025 04:37:15 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtOTBCNUEyN0M4NDQ3NDk2MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/4HL2USUiq8qe/8+thgk5JZ4RjdfSPd6DCgmkFFm0ETmTNDZObfvhexeWmvvAc9zJgM6Bt6nIbn3kos8KHRlxKCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIEIE41gw8mM9qYCLNKb+bo1vBfN9EMFjTDNocOgvSrTiAiEAsQ03WYIOYad4UOm8yS6SMNym212s/r5nt5RPMor+HIQ="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 04:39:11 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNTlCRTk5ODEwNDcyNDBFMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERDy5MncjJ4FwJtG41P3glleLWlmKqvU32A3mkx/quKP1xc+2ToissBcNGD9GrDvlttt+LKyh+MPFi48vqCD/qaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQCdKnzWhHpV3H66iOgAbGyFNgNt2kXt2onKCMRx+dfnkQIhAIxHGyQ8NeMWyOnPNdnkuFdI0i+QeuwodZ2qQxhHS76o"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 04:59:56 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQTZCOEVEMkQ3OTY3NEE1MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOn0CEAtO6xNcgzl2CcQAolpmJhzrj1SxYFN4b4BElJh2UJRn7vmKtAWv2wjcZa3X5Xa1ey9E8ZnN+WbEAv0qmKCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQCGCgJj3vubnbFR5b/d8DszOkVxHU2erdzTCoN0a7guLQIgX6e+c1d55mtrSKwUOUOnlikS4S1xL/cP9JudByzOvfQ="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 05:09:18 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQTg4NDFCNjYzN0I3NDc2MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEj1NUFQI4egq+llAKvnXRaDwJPkTwszaA75HItqSqVx2tLGAWHbDNeUG604WQxx6VI6wkMdGMhVaBOEV3yAo/aqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCICiLqrwZ/UfOsh6bsWEf4V5q9+Hnmm6L7a4ysNaKzzWxAiEA7Nnd4/yL6CqiFVvhITfiIVfft6mxgykZj3Mkqjfl4zk="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 05:10:23 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQTc4NTA2MTUxOEEwNDc0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpXRfo+FaivonJqRnKhcQpI78o+S8T4Ta9UhpxFV8MGbBYl6WeqH6+i+hOzJL+gYhDTt4nugQnsYlZ3c+fr8cOqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQCadKq8djWaIPdYd/AlJEny8obHOYTSAliyhE85c6AnWAIhAOL26GKeVMrEX611ses/+xQciT3GSw2cjWB/tVj9jJdn"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 05:16:45 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNUQ0RDgzRDU0MjlENDVBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE08I0NmSQIdyDVVti3Gb1shJmmNc6KFCtt9BhSpubbVopmhILGSgd/qqjJodSddbYXWkjbweHk8RLN5sXC2pjJ6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQDOfs5blx2r9CVuAQWPDRqGrwEmnY2kmxhNjRogXmK20wIhAKVrChMNgPJeOxMODAavvtHp0HXmaBzv4+oFsPw8nXn+"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 05:17:07 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMzJGRjBFMUQ2RjZBNDlCMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpkKuz5toEko2C4uLozOolZQfil/coXrFNr4xJ+xQDvQzXRNHVwvziAsHRpPjoNRwiOu+mOadLxc9mnyXQeDnZqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQC/yjat0M+VsgynwdX1gTR7v607i3WfP5Ux9zNhrLmRhAIhALFQ/c537yDaDCdx+JEhgLDrMgkD9SZPGSxrKnkfKAdg"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 05:17:22 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNTAwQUM5RjJEMkMxNDMyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExR16qVWLS5Bqqbi1IM0s5iyLPkGqCulthlDcMzxwuL1uDPrtLJvjQhs640FFv7FHLLiP87uJ1qNMNpoC2JWtDaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQC549AUglCnTjl8MJKIGMc8eol5ct/HQB4sgocqCCyLMQIgKzsDvi0fKysOY40JbPbWigJjsMa8FStC+eWaOlXhXrE="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 05:19:48 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNDFENTE0QjU3MzBENDQ2MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEffXXxXOdG0SJRTnMBooN2O8dNI9CJ5NcYFrDP22DNEZEZZ56718FAfs9wPGYduSCeEDGJ59CkTkh/LWIhPUlVaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDkcp2vpvbqgY0+bUSEdrnSzC4+DdCHhCLcY04n35CNtQIgD4wk798ydIH8pJWZtcGb9sdDKlTxBl6GE2FQfcdvnlQ="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[13/11/2025 05:20:06 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQ0Y3QjNDODVBMkY3NDE5MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdkXyX4CAOxqyjW+NgFYM8M8UaMsuaoyiPMk/3xfo3XtcCVs8vP+NQWdEGM91ngCDGXc9w2Kg7fLHNYNrxsGYWqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIGPbj1W8hn+2xE6olFTpHaiIBzOpgTmaMx8jkqYkSCK1AiEAllIOQ4kO2NLoj67/hAhYhIsEVFix9f288ZhRFH2Q2eY="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:02:44 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNEE2RjI3MzlEQTI1NEMyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE2jrL/SrVdyUHB7UwcvdnoW7UsFUZCbFZUfM0lZvIgUAZM1idQcV+hqQNTT6HOFlUUae7ER/7lwgGac/Lw1S6uKCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIAIvg2Q7P5uqiuQ3YUwt5U2a1GFSt87ohZe8096fIH75AiEAqYYX3DHd4qGkAShKoPE9PvcGe2l/KIZgFVLNE756dJs="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:07:26 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/api/v1/compliance
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtRTcyRkNGRjk4M0RGNDQ2MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwMuvBIYkUgQngC6geL0QG2V4V8CVdYsqVWUF/MS54Gr6Cbi+F5GwiEx7q8endgE4jNqBPIYpUi77NhFu0ws6m6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQDl7RXHq7YN1AwLDEHU6YE/gDrZi+5HJFKe2yvqBEmA1wIhANfn1997zi6ph2TVXHQnZ2ygg21sCCebZ8l92fSLtmkz"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:08:03 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/api/v1/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtMERCMDM4REVBNTk2NEUyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEnt7P2L7Ueeg063ktciNMbkDacHA9ZsLCt1hKs5cvthV87QBV5lcz4YQitnuxgLOz5BHeroP9+BoHCuAtW2wzhqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQC2HJCtuwWJVs6T4pmIjfosCtnR3SWBRG34mAjTq30J5AIgTcg/Yq4NsSHPwVpGVtmrV2mNyMjZHeHA+IvndUEV/Kc="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:08:32 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/api/v1/compliance
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQTRBOUE3NzMxMTNBNDlDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEuyTgwNzeIWLufYltNTuamkgVU1+rJUbpV/5pWh/6q8iNkdYipeDdcqvTyP4rizbVCHc8UPOwFbgJr2C3dpZCoqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQCGD+BOPLzEOUYZQXy29/Pn21Wm8b4+hr0b4xIkshQCqQIhANydOVoRTYxTvCZub+Nqx0bbzbU2XocEyb9I5acfjDqA"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:13:32 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNTA1MTE4MkZFN0M4NEJFMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKtb97K6Olxe/IuyaDAkqEEOUdMti6ZZ3VwgrKE8CywBh+ytfm8k8yg4qJyCiEiNsitDDf/H0WPOL46QYCx1sZaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQCJMhV1tj2XXTuWMmZOBwWE91apmEqjvmH31EYjxvkl7gIgSDmoAo/hokXDthel+SOPkG1w4tSUTyVbZWtdqm3CzdA="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:50:51 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICEjCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtM0E1QkRDNTk5QzVBNDJDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZGz/dZg2fAnZ2qX/l2bNvFp77xTVmc6X8gWmM1zttvvCKChs7NJFRyFSSgK73N1o+LFO9itcrovZBTOjcEM6zaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQCFBOT131gMmDE8qAcU2r38B/S3kbK8tVPlzqWD6OgZ7wIhAK/7GmG62f+sCGSelExENvMWZT4sQTEpN4T02yn+Lhzq"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:58:19 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNkI0NkM5MzE5NkI0NEJDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAES3dqDgcb2NsH4jIHZQ1cBzuUKaD6LFHb8brxC+w1eyqNVRCvT6pQP0TFO18mGMfPemuGptxXg2ExM4A6HkUmI6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDCCqcCnMIxN7IUdFG/F2bdOvGj+K1HH+MImii5XOGD3gIgGEJM3Wri8XjAqqIZy7UcfBrMFLg1/TFpr9XDwzAuXUc="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:58:19 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNkI0NkM5MzE5NkI0NEJDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAES3dqDgcb2NsH4jIHZQ1cBzuUKaD6LFHb8brxC+w1eyqNVRCvT6pQP0TFO18mGMfPemuGptxXg2ExM4A6HkUmI6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDCCqcCnMIxN7IUdFG/F2bdOvGj+K1HH+MImii5XOGD3gIgGEJM3Wri8XjAqqIZy7UcfBrMFLg1/TFpr9XDwzAuXUc="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:58:19 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/api/v1/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNkI0NkM5MzE5NkI0NEJDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAES3dqDgcb2NsH4jIHZQ1cBzuUKaD6LFHb8brxC+w1eyqNVRCvT6pQP0TFO18mGMfPemuGptxXg2ExM4A6HkUmI6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDCCqcCnMIxN7IUdFG/F2bdOvGj+K1HH+MImii5XOGD3gIgGEJM3Wri8XjAqqIZy7UcfBrMFLg1/TFpr9XDwzAuXUc="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 02:58:19 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/api/v1/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtNkI0NkM5MzE5NkI0NEJDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAES3dqDgcb2NsH4jIHZQ1cBzuUKaD6LFHb8brxC+w1eyqNVRCvT6pQP0TFO18mGMfPemuGptxXg2ExM4A6HkUmI6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDCCqcCnMIxN7IUdFG/F2bdOvGj+K1HH+MImii5XOGD3gIgGEJM3Wri8XjAqqIZy7UcfBrMFLg1/TFpr9XDwzAuXUc="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 03:06:23 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtOEY5MzdFOTI3Mjk0NDNEMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEp/4nh67EJ25kq9r9yugHXo+g698YUDFtD+JKXXeMDiBH+Wmp+igpujFHzs8dib86bx59v5Y7bT0F9anoY/vyaqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIFHIyeZRKadGAWMG1PuHjY/Xq8oz4EQ2xU/V2RfpIJ2/AiEAwcn4Sb6c4SgfcHTsoXsiGhquzRCJSJ9XJG3W1llAdF0="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 03:06:23 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtOEY5MzdFOTI3Mjk0NDNEMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEp/4nh67EJ25kq9r9yugHXo+g698YUDFtD+JKXXeMDiBH+Wmp+igpujFHzs8dib86bx59v5Y7bT0F9anoY/vyaqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIFHIyeZRKadGAWMG1PuHjY/Xq8oz4EQ2xU/V2RfpIJ2/AiEAwcn4Sb6c4SgfcHTsoXsiGhquzRCJSJ9XJG3W1llAdF0="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[16/11/2025 03:06:23 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtOEY5MzdFOTI3Mjk0NDNEMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEp/4nh67EJ25kq9r9yugHXo+g698YUDFtD+JKXXeMDiBH+Wmp+igpujFHzs8dib86bx59v5Y7bT0F9anoY/vyaqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItNC4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIFHIyeZRKadGAWMG1PuHjY/Xq8oz4EQ2xU/V2RfpIJ2/AiEAwcn4Sb6c4SgfcHTsoXsiGhquzRCJSJ9XJG3W1llAdF0="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[18/11/2025 03:19:09 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance/csids
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtM0FBNkI5MkNGMTJGNDM3MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE4DkAOfTvZKmsMZViUG6AtgOfCZJvQmSrJplEdGXEiDfALrJQqLVDhYOcDkZiA8nOaVe9g1SzRXl7OV29ZGUQEqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIFmiGokJ92STGJuXXP9lCrLyeYNutv2L4aTsAl3ZMxOGAiEA2pljEKNy0S/AF5kL3+vJ4J1wN2WmYVCS+jO9W3pCC5A="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[18/11/2025 03:19:09 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtM0FBNkI5MkNGMTJGNDM3MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE4DkAOfTvZKmsMZViUG6AtgOfCZJvQmSrJplEdGXEiDfALrJQqLVDhYOcDkZiA8nOaVe9g1SzRXl7OV29ZGUQEqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIFmiGokJ92STGJuXXP9lCrLyeYNutv2L4aTsAl3ZMxOGAiEA2pljEKNy0S/AF5kL3+vJ4J1wN2WmYVCS+jO9W3pCC5A="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[18/11/2025 05:14:49 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICEDCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtRTU0MzM2RDE1MDQ5NDJBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEnPGkJAh8GPOTjp3Zj46cRp2wLxTNTLrw78Z9n5knl52S6dhHFmDxBqKWOa54w0Xd1zApXqzrYT/iDYDeTdRaOqCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0cAMEQCIAtF4JUcxaBXc/HUj1wTtjeyqh1FHg+rS0yR+QVLapNlAiBX2oq2jeqjofGuQoWS3vGiC2szktD541taYHRyV2NplQ=="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[18/11/2025 05:16:40 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/api/v1/compliance
+Request: {"csr":"MIICETCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQTEzNDUxQTkyNkQzNDE5MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZzCkiNZmPSjLGBkWY05IV+VGuLTflGasijWoW8Onh9gTlQQ5xRh0jqqW+GwR6QBXg7r5nI1N4VWk7HOEqUB/P6CBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0gAMEUCIQDy0w9IJEnSzYlIpIbKbxN+jX0e5A1E9NlKq6fQHK/ydgIgDV5HYE0dym39OZoPSxRIe68CYblMnia2pCUqzouoA6Q="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[18/11/2025 05:29:59 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICEDCCAbcCAQAwgZcxCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxLDAqBgNVBAMTI1RTVC0zMTQzNDAxMjg2MDAwMDMtQjZCMzRBNzlBODg0NENFMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE1rcZbvzN05DLsP+PCkoal02g0kb78ZfdNO7/Gy49yxpVF/UDQZhnsc4gQSNuH8626lorOnN/ngjVMrTIGDbkOaCBvDCBuQYJKoZIhvcNAQkOMYGrMIGoMIGNBgNVHREEgYUwgYKCMDEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0cAMEQCIDj2F1LxyDOqMOuGfNLQ+TVVmPqJRd2Rw0gNooexIZZ1AiAJdRaCf51nEYsrIg9PAZNHQif8tXiA2uGbq+cdzRorkA=="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[20/11/2025 02:46:55 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICIjCCAccCAQAwgZ8xCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxNDAyBgNVBAMTK1RTVC0zMTQzNDAxMjg2MDAwMDMtREVWSUNFLTFDQjREOEFCNzcyOTQxQzAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQINRltfxn7NMPkQGsy2Gv2Ea6aQ8bRf+oot0SGqDYAKTJhgZaXMEDzoADypGLUWwMAaI9L3wXAl9k3VfGWPasyoIHEMIHBBgkqhkiG9w0BCQ4xgbMwgbAwgZUGA1UdEQSBjTCBioJJMS1IaWphbWFDbGluaWN8Mi0xLjAuMHwzLTEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZuggQxMTAwgghUQURBODgzM4IKSGVhbHRoY2FyZTAJBgNVHRMEAjAAMAsGA1UdDwQEAwIFoDAKBggqhkjOPQQDAgNJADBGAiEAl2JwZTrQo70vFZ5uFvYZP+KfVPhb/sfh2GebGqiGWK8CIQChz3MfPqD3z/ZRZK+dVcRVe/u9UD8TdjFc/c8HomI40g=="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[20/11/2025 02:50:56 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICIjCCAccCAQAwgZ8xCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxNDAyBgNVBAMTK1RTVC0zMTQzNDAxMjg2MDAwMDMtREVWSUNFLTFDQjREOEFCNzcyOTQxQzAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASbPoh77jRK4Zg0NkwJDTQjZaQjlJkzehmNueuB9ANyUJB16Uz8FXs0MDLOf8ZMBJris8pJnn7RY5OqZVaJwyf2oIHEMIHBBgkqhkiG9w0BCQ4xgbMwgbAwgZUGA1UdEQSBjTCBioJJMS1IaWphbWFDbGluaWN8Mi0xLjAuMHwzLTEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZuggQxMTAwgghUQURBODgzM4IKSGVhbHRoY2FyZTAJBgNVHRMEAjAAMAsGA1UdDwQEAwIFoDAKBggqhkjOPQQDAgNJADBGAiEA5MGDIdgIAKhJSvIB7BxcyrQddJR+0dzRv4jpsfxAqI0CIQDWMJmruWbgUvT4LZlNJVSU0OH2V/tzyw9Ozwo9qYKAAg=="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[20/11/2025 03:17:19 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICMzCCAdgCAQAwgZ8xCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxNDAyBgNVBAMTK1RTVC0zMTQzNDAxMjg2MDAwMDMtREVWSUNFLTFDQjREOEFCNzcyOTQxQzAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARGMd1eTEBj9Rl6Ky1lTcQG5DecTtedZib6CcoPbdHOy/eNHQ8ugMoluGimNyOnmWVinEkcCkyqGG6hvNBpcX7hoIHVMIHSBgkqhkiG9w0BCQ4xgcQwgcEwgaYGA1UdEQSBnjCBm4JJMS1IaWphbWFDbGluaWN8Mi0xLjAuMHwzLTEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQC+aNXin4K7cpYLmfxK6hY9btNtR5SWSoR8p5HaFzVBGwIhAOV5CGi4EW9SjnvMIqIpcd7MYazz8yS3R2t6GPG1tDKL"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[20/11/2025 03:18:43 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICMzCCAdgCAQAwgZ8xCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxNDAyBgNVBAMTK1RTVC0zMTQzNDAxMjg2MDAwMDMtREVWSUNFLTFDQjREOEFCNzcyOTQxQzAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQRLtDiTx/+la4/U+sx4j2y1MViZTfcdGApCzAMyrtiXNXCjRFM2qgJ8kYcLF7K6cCx67EkulPSkAy9vgE+YvWpoIHVMIHSBgkqhkiG9w0BCQ4xgcQwgcEwgaYGA1UdEQSBnjCBm4JJMS1IaWphbWFDbGluaWN8Mi0xLjAuMHwzLTEtSGlqYW1hQ2xpbmljfDItMS4wLjB8My1ERVZJQ0UtMUNCNEQ4QUI3NzI5NDFDMIIheG4tLSAgIC0weWUzYWNqZnpqMWJtb3E5cXphdGlhZmZugg8zMTQzNDAxMjg2MDAwMDOCBDExMDCCCFRBREE4ODMzggpIZWFsdGhjYXJlMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMCA0kAMEYCIQDk4jfR7PnUg5FmQcI/HsPfwvOKF0MaDIUI4mhrcgAjDAIhAN5hjFC20U24IarCJP7EndlHQYalqyhi0PNgzkfYEXL8"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[20/11/2025 03:23:33 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICGDCCAb8CAQAwgZ8xCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxNDAyBgNVBAMTK1RTVC0zMTQzNDAxMjg2MDAwMDMtREVWSUNFLTFDQjREOEFCNzcyOTQxQzAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARTw85/wB3//8T8xSg3gzyEQsVQKb0odPE7mMusxJwwLxjkayVfarBYEomBZ4t76N+fUNbORJ47k18QxR2NTTsvoIG8MIG5BgkqhkiG9w0BCQ4xgaswgagwgY0GA1UdEQSBhTCBgoIwMS1IaWphbWFDbGluaWN8Mi0xLjAuMHwzLURFVklDRS0xQ0I0RDhBQjc3Mjk0MUMwgiF4bi0tICAgLTB5ZTNhY2pmemoxYm1vcTlxemF0aWFmZm6CDzMxNDM0MDEyODYwMDAwM4IEMTEwMIIIVEFEQTg4MzOCCkhlYWx0aGNhcmUwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwCgYIKoZIzj0EAwIDRwAwRAIgHa02Znt34o6w/zERmjJxkqRi4il5ehmfesqt03p/GykCID4F4TlrUuAQyHtTcjoQ4JMkVNUGhlpPok07/TLsK+N3"}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[20/11/2025 04:07:08 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/compliance
+Request: {"csr":"MIICGjCCAb8CAQAwgZ8xCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxNDAyBgNVBAMTK1RTVC0zMTQzNDAxMjg2MDAwMDMtREVWSUNFLTFDQjREOEFCNzcyOTQxQzAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASXCb4KaF5gzc07Tn52dsz/pS1tVzfZaYRPU2wlX2IvSgymQpgYUa6QA+DfbZVWPuWcw9K80k7h/v4AcN1/DQEKoIG8MIG5BgkqhkiG9w0BCQ4xgaswgagwgY0GA1UdEQSBhTCBgoIwMS1IaWphbWFDbGluaWN8Mi0xLjAuMHwzLURFVklDRS0xQ0I0RDhBQjc3Mjk0MUMwgiF4bi0tICAgLTB5ZTNhY2pmemoxYm1vcTlxemF0aWFmZm6CDzMxNDM0MDEyODYwMDAwM4IEMTEwMIIIVEFEQTg4MzOCCkhlYWx0aGNhcmUwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwCgYIKoZIzj0EAwIDSQAwRgIhAN19Hqxr2i+nI+mSo654gqYsvoxRRlCldBfUiBpLOMVZAiEA5iIy8J5u/EMOpBbf6pHjGFhRNju12aZ622UhEGoDAzE="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+
+[20/11/2025 04:10:24 م] GetComplianceCSID
+Endpoint: https://gw-fatoora.zatca.gov.sa/e-invoicing/simulation/api/v1/compliance
+Request: {"csr":"MIICGjCCAb8CAQAwgZ8xCzAJBgNVBAYTAlNBMTUwMwYDVQQKHiwGRQYxBkMGMgAgBkQGRQYzBikAIAY0BkEGJwYhACAGRAZEBi0GLAYnBkUGKTEjMCEGA1UECx4aBicGRAZBBjEGOQAgBicGRAYxBiYGSgYzBkoxNDAyBgNVBAMTK1RTVC0zMTQzNDAxMjg2MDAwMDMtREVWSUNFLTFDQjREOEFCNzcyOTQxQzAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASuOtBWM9uVeeFTp5bErtNe+SSyYenCLhzR8kCxmh0JyzSACl+aupyA3zdCnqgkfS2Ik9RYCTThkdz1sXO9j7SWoIG8MIG5BgkqhkiG9w0BCQ4xgaswgagwgY0GA1UdEQSBhTCBgoIwMS1IaWphbWFDbGluaWN8Mi0xLjAuMHwzLURFVklDRS0xQ0I0RDhBQjc3Mjk0MUMwgiF4bi0tICAgLTB5ZTNhY2pmemoxYm1vcTlxemF0aWFmZm6CDzMxNDM0MDEyODYwMDAwM4IEMTEwMIIIVEFEQTg4MzOCCkhlYWx0aGNhcmUwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwCgYIKoZIzj0EAwIDSQAwRgIhAI8Qy2uKItAy/ur092GsecsJSmJG8p45VTev2LXUmZZkAiEAmWlHUxQoPT+0av+7ihYjQBdYGrs+Mxzj7kRvDdkoQl8="}
+Status: 404 NotFound
+Response: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+

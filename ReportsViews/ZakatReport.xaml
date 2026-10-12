@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="HijamaClinicManagement.ReportsViews.ZakatReport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HijamaClinicManagement.ReportsViews"
+             mc:Ignorable="d" 
+              d:DesignHeight="450" d:DesignWidth="800" Background="White" FlowDirection="RightToLeft" Loaded="UserControl_Loaded">
+    <!-- Zakat and Income Data View-->
+    <Grid   x:Name="ZakatIncome_Content" Visibility="Visible" Background="White" FlowDirection="RightToLeft">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" >
+            <TextBlock Text="من التاريخ" Height="26" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16"/>
+            <StackPanel   Orientation="Horizontal"  Width="200" HorizontalAlignment="Left" Margin="10,0,0,0">
+                <DatePicker Width="170" Focusable="False" Height="30" x:Name="Zakat_DateFromField"  Foreground="Black" Padding="0,5"/>
+            </StackPanel>
+            <TextBlock Text="الى التاريخ" Height="26" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,15,0"/>
+            <StackPanel  Orientation="Horizontal" Margin="2,0,0,0" Width="200" HorizontalAlignment="Left">
+                <DatePicker Width="170" Focusable="False" Height="30" x:Name="Zakat_DateToField"  Foreground="Black" Padding="0,5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Button x:Name="Zakat_Search__Button"   Content="بحث"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MinWidth="100"  Margin="0" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="Zakat_Search__Button_Click"/>
+            <Button x:Name="Clear_Date_Zakat_Button"   Content="مسح"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MinWidth="100"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="Clear_Date_Zakat_Button_Click"/>
+
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="Zakat_Data"  AutoGenerateColumns="True" IsReadOnly="True" Style="{DynamicResource DataGridStyle}" Focusable="False" ItemsSource="{Binding}" Margin="0,5,0,10">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn  Width="200"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="Black" />
+                <DataGridTextColumn  Width="200"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="Black"  />
+                <DataGridTextColumn  Width="200" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="Black"  />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Grid.Column="2" Grid.Row="2" x:Name="Zakat_Export__Button"  Focusable="False"  Content="استخراج"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="270"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="Zakat_Export__Button_Click" VerticalAlignment="Top"/>
+       
+        <!-- Grid resultof_Zakat_Data -->
+        <DataGrid Grid.Row="3" x:Name="resultof_Zakat_Data" AutoGenerateColumns="True" IsReadOnly="True" Style="{DynamicResource DataGridStyle}" Margin="0,10,0,0">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <!-- <DataGridTextColumn Header="الفترة الزمنية" Width="200" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="30" Foreground="Black" />-->
+                <DataGridTextColumn   Width="200" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="30" Foreground="Black"  />
+                <DataGridTextColumn   Width="200" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="30" Foreground="Black" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

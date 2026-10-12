@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00177D83-1AE7-4769-BAFE-B48EEE0DAE51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HijamaClinicManagement</RootNamespace>
+    <AssemblyName>HijamaClinicManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MainIconDesktop.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.2.46.5\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.2.46.5\lib\net45\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.3.2, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.3\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.2.1.2, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.2.1\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="QRCoder, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.7.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon-he-10.8">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\saxon-he-10.8.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon-he-api-10.8">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\saxon-he-api-10.8.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Data.WPF, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Data.WPF.20.4.0.54\lib\net46\Syncfusion.Data.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.20.4.0.54\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGrid.WPF, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfGrid.WPF.20.4.0.54\lib\net46\Syncfusion.SfGrid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.WPF, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfNavigationDrawer.WPF.20.4.0.54\lib\net46\Syncfusion.SfNavigationDrawer.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSkinManager.WPF, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfSkinManager.WPF.20.4.0.54\lib\net46\Syncfusion.SfSkinManager.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.20.4.0.54\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.20.4.0.54\lib\net46\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Taqnyat, Version=1.1.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Taqnyat.1.0.11\lib\Taqnyat.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZatcaIntegrationSDK">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\ZatcaIntegrationSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\..\..\..\Users\hadel\Downloads\ZatcaIntegration_CSharp_TrailVersion (1)\ZatcaIntegration_CSharp_TrailVersion\SimpleInvoice\bin\Debug\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppointmentsView\AppointmentsMg.xaml.cs">
+      <DependentUpon>AppointmentsMg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentsView\AppointmentsView.xaml.cs">
+      <DependentUpon>AppointmentsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicManagementViews\BackupView.xaml.cs">
+      <DependentUpon>BackupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicManagementViews\ExpensesView.xaml.cs">
+      <DependentUpon>ExpensesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicManagementViews\SendEmailView.xaml.cs">
+      <DependentUpon>SendEmailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicSettingsViews\ClinicInfo.xaml.cs">
+      <DependentUpon>ClinicInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicSettingsViews\DiscountsSettings.xaml.cs">
+      <DependentUpon>DiscountsSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicSettingsViews\TaxSettings.xaml.cs">
+      <DependentUpon>TaxSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoardView\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DBHandler\AppointmentsAdapter.cs" />
+    <Compile Include="DBHandler\BackupDbAdapter.cs" />
+    <Compile Include="DBHandler\BillAdapter.cs" />
+    <Compile Include="DBHandler\ConnectionDB.cs" />
+    <Compile Include="DBHandler\ContraindicationsOfCuppingAdapter.cs" />
+    <Compile Include="DBHandler\DashBoardAdapter.cs" />
+    <Compile Include="DBHandler\DeletedBillsAdapter.cs" />
+    <Compile Include="DBHandler\DisclaimerFormAdapter.cs" />
+    <Compile Include="DBHandler\DiscountsAdapter.cs" />
+    <Compile Include="DBHandler\ExpenseAdapter.cs" />
+    <Compile Include="DBHandler\ForgetPasswordAdapter.cs" />
+    <Compile Include="DBHandler\LoginAdapter.cs" />
+    <Compile Include="DBHandler\MedicalHistoryAdapter.cs" />
+    <Compile Include="DBHandler\MyNotesAdapter.cs" />
+    <Compile Include="DBHandler\PainAreasAdapter.cs" />
+    <Compile Include="DBHandler\PastMedicalHistoryAdapter.cs" />
+    <Compile Include="DBHandler\PatientAdapter.cs" />
+    <Compile Include="DBHandler\SessionPhysicalAdaptercs.cs" />
+    <Compile Include="DBHandler\SmsAdapter.cs" />
+    <Compile Include="DBHandler\TaxAdapter.cs" />
+    <Compile Include="DBHandler\TreatmentPlanAdapter.cs" />
+    <Compile Include="DBHandler\UsersAdapter.cs" />
+    <Compile Include="HijamaCenterDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HijamaCenterDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HijamaCenterDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HijamaCenterDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HijamaCenterDbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HijamaCenterDbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HomeWindow.xaml.cs">
+      <DependentUpon>HomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxRestyle\MessageBoxInformation.xaml.cs">
+      <DependentUpon>MessageBoxInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxRestyle\MessageBoxInformation2.xaml.cs">
+      <DependentUpon>MessageBoxInformation2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\BillExtractWindow.xaml.cs">
+      <DependentUpon>BillExtractWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomContentView.xaml.cs">
+      <DependentUpon>HomContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\BillsMgView.xaml.cs">
+      <DependentUpon>BillsMgView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\DeletedBillsMgView.xaml.cs">
+      <DependentUpon>DeletedBillsMgView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\ExtraSearchView.xaml.cs">
+      <DependentUpon>ExtraSearchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\PainAreaWindow.xaml.cs">
+      <DependentUpon>PainAreaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\PatientFileView.xaml.cs">
+      <DependentUpon>PatientFileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\PatientsSessionView.xaml.cs">
+      <DependentUpon>PatientsSessionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\PrintBill.xaml.cs">
+      <DependentUpon>PrintBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\PrintBillsMgView.xaml.cs">
+      <DependentUpon>PrintBillsMgView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\PrintPatientFileView.xaml.cs">
+      <DependentUpon>PrintPatientFileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatienViews\TreatmentPlanWindow.xaml.cs">
+      <DependentUpon>TreatmentPlanWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsViews\BillsReport.xaml.cs">
+      <DependentUpon>BillsReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsViews\DailyIncom.xaml.cs">
+      <DependentUpon>DailyIncom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsViews\ExpensesReport.xaml.cs">
+      <DependentUpon>ExpensesReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsViews\PatientsReport.xaml.cs">
+      <DependentUpon>PatientsReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsViews\ZakatReport.xaml.cs">
+      <DependentUpon>ZakatReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sign in.xaml.cs">
+      <DependentUpon>Sign in.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SMSView\SMS.xaml.cs">
+      <DependentUpon>SMS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersView\AccountsManagement.xaml.cs">
+      <DependentUpon>AccountsManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersView\MyAccount.xaml.cs">
+      <DependentUpon>MyAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersView\MyNotes.xaml.cs">
+      <DependentUpon>MyNotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Zatca Bill\AutoGenerateCSR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zatca Bill\AutoGenerateCSR.designer.cs">
+      <DependentUpon>AutoGenerateCSR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zatca Bill\CSIDInfo.cs" />
+    <Compile Include="Zatca Bill\CSIDInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zatca Bill\CSIDInfoForm.designer.cs">
+      <DependentUpon>CSIDInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zatca Bill\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zatca Bill\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zatca Bill\GeneratePDFA3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zatca Bill\GeneratePDFA3.designer.cs">
+      <DependentUpon>GeneratePDFA3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zatca Bill\Introfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zatca Bill\Introfrm.designer.cs">
+      <DependentUpon>Introfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zatca Bill\InvoiceItems.cs" />
+    <Compile Include="Zatca Bill\MainSettings.cs" />
+    <Compile Include="Zatca Bill\RenewalCSID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zatca Bill\RenewalCSID.designer.cs">
+      <DependentUpon>RenewalCSID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zatca Bill\SaudiZatca.cs" />
+    <Page Include="AppointmentsView\AppointmentsMg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppointmentsView\AppointmentsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClinicManagementViews\BackupView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClinicManagementViews\ExpensesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClinicManagementViews\SendEmailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClinicSettingsViews\ClinicInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClinicSettingsViews\DiscountsSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClinicSettingsViews\TaxSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DashBoardView\DashBoardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MessageBoxRestyle\MessageBoxInformation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MessageBoxRestyle\MessageBoxInformation2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\BillExtractWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomContentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\BillsMgView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\DeletedBillsMgView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\ExtraSearchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\PainAreaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\PatientFileView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\PatientsSessionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\PrintBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\PrintBillsMgView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\PrintPatientFileView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatienViews\TreatmentPlanWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportsViews\BillsReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportsViews\DailyIncom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportsViews\ExpensesReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportsViews\PatientsReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportsViews\ZakatReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sign in.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SMSView\SMS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UsersView\AccountsManagement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersView\MyAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersView\MyNotes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zatca Bill\AutoGenerateCSR.resx">
+      <DependentUpon>AutoGenerateCSR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zatca Bill\CSIDInfoForm.resx">
+      <DependentUpon>CSIDInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zatca Bill\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zatca Bill\GeneratePDFA3.resx">
+      <DependentUpon>GeneratePDFA3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zatca Bill\Introfrm.resx">
+      <DependentUpon>Introfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zatca Bill\RenewalCSID.resx">
+      <DependentUpon>RenewalCSID.cs</DependentUpon>
+    </EmbeddedResource>
+    <Resource Include="Resources\Font\Almarai-Regular.ttf" />
+    <Resource Include="Images\IconDesktop.ico" />
+    <Resource Include="Images\MainIconDesktop.ico" />
+    <Resource Include="MainIconDesktop.ico" />
+    <Resource Include="Images\account-circle-custom %281%29.png" />
+    <Resource Include="Images\account-circle-custom %282%29.png" />
+    <Resource Include="Images\account-circle-custom.png" />
+    <Resource Include="Images\account-custom.png" />
+    <Resource Include="Images\account-group-outline-custom.png" />
+    <Resource Include="Images\account-multiple-check-custom.png" />
+    <Resource Include="Images\account-supervisor-circle-custom %281%29.png" />
+    <Resource Include="Images\account-supervisor-circle-custom %282%29.png" />
+    <Resource Include="Images\account-supervisor-circle-custom.png" />
+    <Resource Include="Images\alert-custom.png" />
+    <Resource Include="Images\bed-custom.png" />
+    <Resource Include="Images\calendar-account-custom.png" />
+    <Resource Include="Images\calendar-account-custom_big.png" />
+    <Resource Include="Images\calendar-edit-custom.png" />
+    <Resource Include="Images\calendar-filter-custom.png" />
+    <Resource Include="Images\cash-multiple-custom.png" />
+    <Resource Include="Images\cash-plus-custom.png" />
+    <Resource Include="Images\clock-custom.png" />
+    <Resource Include="Images\close-custom.png" />
+    <Resource Include="Images\cog-custom.png" />
+    <Resource Include="Images\content-paste-custom.png" />
+    <Resource Include="Images\database-arrow-right-custom.png" />
+    <Resource Include="Images\email-arrow-right-custom.png" />
+    <Resource Include="Images\fastmediaone.png" />
+    <Resource Include="Images\file-account-custom.png" />
+    <Resource Include="Images\file-chart-custom.png" />
+    <Resource Include="Images\file-document-custom.png" />
+    <Resource Include="Images\help-circle-custom.png" />
+    <Resource Include="Images\home-modern-custom.png" />
+    <Resource Include="Images\information-custom.png" />
+    <Resource Include="Images\information.png" />
+    <Resource Include="Images\logo4website.png" />
+    <Resource Include="Images\logout-custom.png" />
+    <Resource Include="Images\message-processing-custom.png" />
+    <Resource Include="Images\note-multiple-outline-custom.png" />
+    <Resource Include="Images\pencil-circle-custom %281%29.png" />
+    <Resource Include="Images\pencil-circle-custom %282%29.png" />
+    <Resource Include="Images\pencil-circle-custom.png" />
+    <Resource Include="Images\percent-custom.png" />
+    <Resource Include="Images\receipt-text-custom.png" />
+    <Resource Include="Images\receipt-text-remove-custom.png" />
+    <Resource Include="Images\video-box-custom.png" />
+    <Resource Include="Images\view-dashboard-custom.png" />
+    <Resource Include="Images\web-custom.png" />
+    <Resource Include="Images\window-maximize-custom.png" />
+    <Resource Include="Images\window-minimize-custom.png" />
+    <Resource Include="Images\1.png" />
+    <Resource Include="Images\2.png" />
+    <Resource Include="Images\3.png" />
+    <Resource Include="Images\4.png" />
+    <Resource Include="Images\5.png" />
+    <Resource Include="Images\6.png" />
+    <Resource Include="Images\7.png" />
+    <Resource Include="Images\8.png" />
+    <Resource Include="Images\9.png" />
+    <Resource Include="Images\LogoFastMedia.png" />
+    <Resource Include="Images\file-account-custom-big.png" />
+    <Resource Include="Images\receipt-text-custom-big.png" />
+    <Resource Include="Images\receipt-text-remove-custom-big.png" />
+    <Resource Include="Images\file-plus-outline-custom.png" />
+    <Resource Include="Images\percent-outline-custom.png" />
+    <Resource Include="Images\home-export-outline-custom.png" />
+    <Resource Include="Images\file-alert-custom.png" />
+    <Resource Include="Images\postage-stamp-custom.png" />
+    <Resource Include="Images\QR_Code.png" />
+    <Resource Include="Images\QR.png" />
+    <Content Include="Resources\BillsReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ExpencesReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\PatientsReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="HijamaCenterDbDataSet.xsc">
+      <DependentUpon>HijamaCenterDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HijamaCenterDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HijamaCenterDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HijamaCenterDbDataSet.xss">
+      <DependentUpon>HijamaCenterDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HijamaCenterDbDataSet1.xsc">
+      <DependentUpon>HijamaCenterDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HijamaCenterDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HijamaCenterDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HijamaCenterDbDataSet1.xss">
+      <DependentUpon>HijamaCenterDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HijamaCenterDbDataSet2.xsc">
+      <DependentUpon>HijamaCenterDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HijamaCenterDbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HijamaCenterDbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HijamaCenterDbDataSet2.xss">
+      <DependentUpon>HijamaCenterDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mainIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeWindowBackground1.jpg" />
+    <Resource Include="Images\HomeWindowBackground2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\show password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\hide password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\جسم.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeWindowBackground3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HeaderFile.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets')" />
+</Project>

@@ -1,0 +1,107 @@
+﻿<Window x:Class="HijamaClinicManagement.PatienViews.PrintPatientFileView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:HijamaClinicManagement.PatienViews"
+        mc:Ignorable="d"
+        Title="طباعة ملف المريض" Height="29.7cm" Width="21.0cm" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" MouseDown="Window_MouseDown" Loaded="Window_Loaded">
+    <ScrollViewer MouseDown="ScrollViewer_MouseDown">
+        <Grid  Height="29.7cm" Width="18.0cm" MouseDown="Grid_MouseDown" >
+            <!-- Craete Button For Closing-->
+            <!-- <materialDesign:PackIcon  x:Name="CloseIcon_Button" Kind="Close"  Height="35" Width="32" Foreground="#FFF97538" HorizontalAlignment="Left"  MouseDown="CloseIcon_Button_MouseDown"/>-->
+
+            <!-- Craete Button For Printing-->
+            <Button x:Name="Print_Button" VerticalAlignment="Top" Width="50" Height="50" Margin="30,140,0,0" HorizontalAlignment="Left" Background="#76B82A" Click="Print_Button_Click" Style="{StaticResource ButtonStyle}">
+                <materialDesign:PackIcon Kind="Printer" Width="40" Height="40"/>
+            </Button>
+
+
+            <Grid  Height="29.7cm" Width="18.0cm" x:Name="Print_File" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!-- header image ....-->
+                <Image Grid.Row="0" Source="/HijamaClinicManagement;component/Images/HeaderFile.jpg" Stretch="UniformToFill"/>
+
+                <!-- Titel-->
+                <TextBlock  Grid.Row="1" Text="استمارة معلومات المريض" HorizontalAlignment="Center" Height="70" FontFamily="Andalus" FontSize="40"/>
+                <!-- create body for patient file-->
+                <StackPanel Grid.Row="2" Orientation="Vertical">
+                    <StackPanel  Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft" x:Name="Item1" Height="50" VerticalAlignment="Top" Width="650">
+                        <TextBlock   Text="رقم الملف" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock   Width="200"  Height="27"   x:Name="PatientFileNumField" VerticalAlignment="Top"  Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                        <TextBlock   Text="تاريخ الملف" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Margin="20,0,0,0" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="PatientFileDateField" VerticalAlignment="Top"  Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel  Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft" x:Name="Item2" Height="50"  Width="650">
+                        <TextBlock   Text="اسم المريض" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock  Width="200" Text="هديل خليلي " FontSize="17" Height="27" x:Name="PatientNameField" VerticalAlignment="Top" Foreground="Black" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                        <TextBlock   Text="العمر" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Margin="20,0,0,0" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="AgeField" VerticalAlignment="Top"  Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel  Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft" x:Name="Item3" Height="50"  Width="650">
+                        <TextBlock   Text="رقم الجوال" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="MobileNumField" VerticalAlignment="Top"  Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                        <TextBlock   Text="رقم الهوية" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Margin="20,0,0,0" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="NationalityNumField" VerticalAlignment="Top"  Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel  Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft" x:Name="Item4" Height="50"  Width="650">
+                        <TextBlock   Text="الجنس" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="Gender" VerticalAlignment="Top" Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                        <TextBlock   Text="الحالة الإجتماعية" FontFamily="Andalus" FontSize="24" Width="120" Height="30" VerticalAlignment="Top" Margin="20,0,0,0" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="180"  Height="27" x:Name="MaritalStatus" VerticalAlignment="Top"  Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel  Grid.Row="2" Orientation="Horizontal" x:Name="Item5" FlowDirection="RightToLeft" Height="50"  Width="650">
+                        <TextBlock   Text="العنوان" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="Address" VerticalAlignment="Top" Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                        <TextBlock   Text="الوظيفة" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Margin="20,0,0,0" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="Job" VerticalAlignment="Top"  Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="0,8,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel  Grid.Row="2" Orientation="Horizontal"  x:Name="Item6" FlowDirection="RightToLeft" Height="50"  Width="650">
+                        <TextBlock   Text="عنوان العمل" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="JobAddress" VerticalAlignment="Top" Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="10,8,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel  Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft" x:Name="Item7" Height="50"  Width="650">
+                        <TextBlock   Text="اسم للطوارئ" FontFamily="Andalus" FontSize="24" Width="100" Height="30" VerticalAlignment="Top" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="EmergencyContactNameField" VerticalAlignment="Top" Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="10,8,0,0"/>
+                        <TextBlock   Text="رقم للطوارئ" FontFamily="Andalus" FontSize="24" Width="90" Height="30" VerticalAlignment="Top" Margin="20,0,0,0" Foreground="Black" Padding="3,0,0,0"/>
+                        <TextBlock Width="200"  Height="27" x:Name="EmergencyContactMobileField" VerticalAlignment="Top" Foreground="Black" FontSize="17" Padding="5,0,0,0" Margin="10,8,0,0"/>
+                    </StackPanel>
+
+
+                    <StackPanel Orientation="Vertical"  x:Name="AcceptText" FlowDirection="RightToLeft"  Width="650">
+                        <TextBlock Text="موافقة/ اخلاء مسؤولية " FontFamily="Andalus" FontSize="24" Foreground="Black" Margin="0,50,0,0"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="أقر أنا:" FontFamily="Andalus" FontSize="20"/>
+                            <TextBlock  x:Name="PatientName2"  Width="200" Height="27"  Foreground="Black" Margin="10,7,0,0"/>
+                        </StackPanel>
+                        <TextBlock Text="بموافقتي على أن يتم معالجتي بالحجامة .. وأنا أدرك وأعلم أن لكل علاج أعراض جانبية قد تنتج عنه.. وأنا أقر " FontFamily="Andalus" FontSize="20"/>
+                        <TextBlock Text=" أنه تم إعلامي شفهياً عن الأعراض الجانبية التي قد تنتج عن الحجامة . كما أعلم أنه لدي القدرة لوقف جلسة العلاج في أي وقت  .. كما أعطي الحق في استخدام البيانات الطبية لحالتي في مجال البحث العلمي .  أقر بأني قرأت ماسبق وأوافق عليه ." Height="115" TextWrapping="Wrap" FontFamily="Andalus" FontSize="20"/>
+                        <StackPanel Orientation="Horizontal" Height="80">
+                            <TextBlock Text="التوقيع:"  Width="60" FontFamily="Andalus" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" x:Name="Footer"  Width="650">
+                        <TextBlock   Width="600" Height="5" Background="Black" Foreground="Black" Margin="10,70,0,0"/>
+                        <TextBlock Text="الطائف - الفيصلية طريق المطار بجوار البريد السعودي"  HorizontalAlignment="Center" FontFamily="Andalus" FontSize="20"/>
+
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+   
+</Window>

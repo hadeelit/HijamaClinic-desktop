@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="HijamaClinicManagement.ClinicManagementViews.SendEmailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HijamaClinicManagement.ClinicManagementViews"
+             mc:Ignorable="d" 
+            d:DesignHeight="450" d:DesignWidth="800" Background="White" FlowDirection="RightToLeft" Loaded="UserControl_Loaded">
+    <!--Create SendEmailContent -->
+    <Grid   x:Name="SendEmailContent" Visibility="Visible" Background="White">
+        <Grid Grid.Row="1" x:Name="SendEmailContentBody">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!-- Header in Row1-->
+            <TextBlock x:Name="HeaderForSendEmailContent" Grid.Row="0" Text="ارسال بريد الكتروني" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="20" Foreground="#FF5D5D61" Padding="25,0,0,0"/>
+            <!-- Create Fields in Row2-->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!-- Create Form Input-->
+                <StackPanel  Grid.Row="1" Grid.Column="0" Orientation="Vertical" Margin="0,20">
+                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <TextBlock   Text="بريد المستقبل" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0"  Foreground="#FF5D5D61" Padding="10,0,0,0"/>
+                        <TextBox  x:Name="ReceiverMail" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" MinWidth="280"  Foreground="Black" Padding="0,8,0,0" Margin="37,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal"  Margin="0,10,0,0">
+                        <TextBlock   Text="بريد المرسل" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="10,0,0,0"/>
+                        <TextBox  x:Name="SenderMail" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" MinWidth="280"  Foreground="Black" Padding="0,8,0,0" Margin="50,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal"  Margin="0,10,0,0">
+                        <TextBlock   Text="كلمة مرور المرسل" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="10,0,0,0"/>
+                        <TextBox  x:Name="SenderPass" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" MinWidth="280" Padding="0,8,0,0" Margin="10,0,0,0" Foreground="Black" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal"  Margin="0,10,0,0">
+                        <TextBlock   Text="موضوع الرسالة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="10,0,0,0"/>
+                        <TextBox  x:Name="MessageSubject" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16"  MinWidth="280" Height="30" Margin="30,0,0,0"  Foreground="Black" FlowDirection="RightToLeft" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal"  Margin="0,10,0,0">
+                        <TextBlock   Text="محتوى الرسالة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="10,0,0,0"/>
+                        <TextBox  x:Name="MessageContent" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Width="280" Height="60" Margin="35,0,0,0" Foreground="Black" FlowDirection="RightToLeft" TextWrapping="Wrap" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal"   Margin="0,10,0,0">
+                        <TextBlock   Text="ارفاق ملف" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="20,0,0,0" Foreground="#FF5D5D61" Padding="10,0,0,0"/>
+                        <TextBlock  x:Name="FileName" FontFamily="Arabic Typesetting" FontSize="20" Width="350" Height="30" Foreground="Black" FlowDirection="LeftToRight" TextWrapping="Wrap"/>
+                        <Button x:Name="UploadFile"   Content="ارفاق"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" Width="100"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="UploadFile_Click"/>
+                    </StackPanel>
+                </StackPanel>
+                <!-- Create Buttons-->
+                <StackPanel Grid.Column="1">
+                    <Button x:Name="Send_Email"   Content="ارسال"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="Send_Email_Click"/>
+                    <Button x:Name="Clear_Fields"   Content="مسح"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="Clear_Fields_Click"/>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</UserControl>

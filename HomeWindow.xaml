@@ -1,0 +1,567 @@
+﻿<Window x:Class="HijamaClinicManagement.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+        xmlns:local="clr-namespace:HijamaClinicManagement"
+        mc:Ignorable="d"
+        Height="600" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="White" AllowsTransparency="False" FlowDirection="RightToLeft" WindowState="Maximized" Loaded="Window_Loaded" ResizeMode="CanResizeWithGrip" MouseDown="Window_MouseDown">
+    <!-- settings for view maximize window like chrome-->
+    <WindowChrome.WindowChrome>
+        <WindowChrome  GlassFrameThickness="0" CornerRadius="0" UseAeroCaptionButtons="False" ResizeBorderThickness="7" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+    <!-- Restyle Controls-->
+    <Window.Resources>
+        <!--Restyle NavigationItem -->
+        <Style x:Key="NavigationItemPathStyle" TargetType="Path">
+            <Setter Property="Width" Value="16" />
+            <Setter Property="Height" Value="16" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Stretch" Value="Fill" />
+            <Setter Property="Fill" Value="#61CE70" />
+        </Style>
+        
+        <!--Restyle syncfusion:GridHeaderCellControl-->
+        <Style TargetType="syncfusion:GridHeaderCellControl" x:Key="headerStyle">
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="/WpfSideNav;component/Resources/Font/#Almarai"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+        </Style>
+        <!--Restyle syncfusion:CellControl-->
+        <Style TargetType="syncfusion:GridCell" x:Key="customCellStyle">
+            <Setter Property="Padding" Value="0,20,0,0" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <syncfusion:SfNavigationDrawer x:Name="navigationDrawer"  DisplayMode="Expanded" Margin="0,0,0,0" DrawerBackground="#f8f8f8" Foreground="Black">
+            <!--  Navigation Menu contents -->
+
+            <!-- Section 1 in Navigation  -->
+            <syncfusion:NavigationItem
+            Header="إعدادات العيادة"
+            IsExpanded="false" ToolTip="إعدادات العيادة"
+            IsSelected="False" Foreground="Black" Margin="0,30,0,0" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/cog-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+                <syncfusion:NavigationItem x:Name="ClinicInfo" Header="معلومات العيادة " FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="ClinicInfo_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/information-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="DiscountSetting" Header="إدارةالتخفيضات" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="DiscountSetting_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/percent-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="TaxSetting" Header="إدارة الضريبة" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="TaxSetting_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/cash-plus-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:NavigationItem>
+
+            <!-- Section 2 in Navigation -->
+            <syncfusion:NavigationItem x:Name="Permisiion" Header="إدارة المستخدمين "  IsExpanded="False" ToolTip="إدارة المستخدمين"
+            IsSelected="False" Foreground="Black" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"  SelectionBackground="#FF61CE70" MouseDown="Permisiion_MouseDown" >
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/account-group-outline-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+                <syncfusion:NavigationItem x:Name="MyAccount" Header="إدارة حسابي" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="MyAccount_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/file-account-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="MyNotes" Header="ملاحظاتي" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="MyNotes_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/note-multiple-outline-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="AccountsMg" Header="إدارة الحسابات" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="AccountsMg_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/account-multiple-check-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:NavigationItem>
+
+            <!-- Section 3 in Navigation -->
+            <syncfusion:NavigationItem x:Name="PatientsMg" Header="إدارة المرضى" IsExpanded="False" ToolTip="إدارة المرضى"
+            IsSelected="False" Foreground="Black" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"  SelectionBackground="#FF61CE70"  MouseDown="DeletedBillsPermisiion_MouseDown">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/bed-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+                <syncfusion:NavigationItem x:Name="PatientsFiles" Header="إدارة ملفات المرضى" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"  SelectionBackground="#FF61CE70" MouseDown="PatientsFiles_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/file-account-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem Header="جلسات المريض" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" IsExpanded="False"
+                  IsSelected="False" SelectionBackground="#FF61CE70">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/content-paste-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                    <!-- Sub Menu For Patirnts Sessions-->
+                    <syncfusion:NavigationItem x:Name="PhysicalExamination" Header="الفحص السريري" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="PhysicalExamination_MouseDown">
+                        <syncfusion:NavigationItem.Icon>
+                            <Image Source="Images/bed-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                        </syncfusion:NavigationItem.Icon>
+                    </syncfusion:NavigationItem>
+                    <syncfusion:NavigationItem x:Name="ContraindicationsOfCupping" Header="محاذير الحجامة" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="ContraindicationsOfCupping_MouseDown">
+                        <syncfusion:NavigationItem.Icon>
+                            <Image Source="Images/file-alert-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                        </syncfusion:NavigationItem.Icon>
+                    </syncfusion:NavigationItem>
+                    <syncfusion:NavigationItem x:Name="Medical_History" Header="التاريخ المرضي" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="Medical_History_MouseDown">
+                        <syncfusion:NavigationItem.Icon>
+                            <Image Source="Images/content-paste-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                        </syncfusion:NavigationItem.Icon>
+                    </syncfusion:NavigationItem>
+                    <syncfusion:NavigationItem x:Name="PastMedical_History" Header="التاريخ المرضي السابق" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="PastMedical_History_MouseDown">
+                        <syncfusion:NavigationItem.Icon>
+                            <Image Source="Images/content-paste-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                        </syncfusion:NavigationItem.Icon>
+                    </syncfusion:NavigationItem>
+                    <syncfusion:NavigationItem x:Name="Disclaimer_Form" Header="نموذج الموافقة" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="Disclaimer_Form_MouseDown">
+                        <syncfusion:NavigationItem.Icon>
+                            <Image Source="Images/postage-stamp-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                        </syncfusion:NavigationItem.Icon>
+                    </syncfusion:NavigationItem>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="Bills_Mg" Header="إدارة الفواتير" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="Bills_Mg_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/receipt-text-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="DBills_Mg" Header="عرض الفواتير المحذوفة" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="DBills_Mg_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/receipt-text-remove-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:NavigationItem>
+
+            <!-- Section 4 in Navigation -->
+            <syncfusion:NavigationItem x:Name="Sms" Header="الرسائل القصيرة" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="Sms_MouseDown" ToolTip="الرسائل القصيرة">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/message-processing-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <!-- Section 5 in Navigation -->
+            <syncfusion:NavigationItem x:Name="Appointmets" Header="الحجوزات" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" ToolTip="الحجوزات">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/calendar-account-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+                <syncfusion:NavigationItem x:Name="AppointmentsMg" Header="إدارة الحجوزات" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="AppointmentsMg_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/calendar-edit-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="AppointmentsView" Header="عرض الحجوزات" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="AppointmentsView_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/calendar-filter-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:NavigationItem>
+
+            <!-- Section 6 in Navigation -->
+            <syncfusion:NavigationItem Header="إدارة العيادة" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" ToolTip="إدارة العيادة">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/home-modern-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+                <syncfusion:NavigationItem x:Name="ExpensesView" Header="إدارة المصروفات" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="ExpensesView_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/cash-multiple-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="SendEmail" Header="إرسال بريد إلكتروني" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="SendEmail_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/email-arrow-right-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="BackUp" Header="نسخ احتياطية" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="BackUp_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/database-arrow-right-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+              <!--<syncfusion:NavigationItem Header="التقارير" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/file-chart-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>-->
+            </syncfusion:NavigationItem>
+
+            <!-- Section 7 in Navigation -->
+            <syncfusion:NavigationItem Header="التقارير" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" ToolTip="التقارير">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="Images/file-chart-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+               <!-- Item1 in report-->
+                <syncfusion:NavigationItem x:Name="PatientsRe" Header="تقارير المرضى" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="PatientsRe_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="Images/file-document-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <!-- Item2 in report-->
+                <syncfusion:NavigationItem x:Name="BillsRe" Header="تقارير الفواتير" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="BillsRe_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="Images/receipt-text-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <!-- Item3 in report-->
+                <syncfusion:NavigationItem x:Name="ExpensesRe" Header="تقارير المصروفات" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="ExpensesRe_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="Images/cash-plus-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <!-- Item4 in report-->
+                <syncfusion:NavigationItem x:Name="ZakatRe" Header="الزكاة والدخل" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="ZakatRe_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="Images/percent-outline-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <!-- Item5 in report-->
+                <syncfusion:NavigationItem x:Name="DailyIncom" Header="مجموع الدخل اليومي" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="DailyIncom_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="Images/file-plus-outline-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:NavigationItem>
+            
+            <!-- Section 8 in Navigation -->
+            <syncfusion:NavigationItem x:Name="DashBoard" Header="لوحة التحكم" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="DashBoard_MouseDown" ToolTip="لوحة التحكم">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/view-dashboard-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <!-- Section 8 in Navigation -->
+            <syncfusion:NavigationItem x:Name="BackHome" Header="الرئيسية" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="BackHome_MouseDown" ToolTip="الرئيسية">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="Images/home-export-outline-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+           <syncfusion:NavigationItem x:Name="Zatca" Header="هيئة الزكاة والضريبة" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="Zatca_MouseDown" ToolTip="هيئة الزكاة والضريبة">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/cog-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+            
+            <!-- Footer view-->
+            <syncfusion:NavigationItem  ItemType="Separator" Width="190" Margin="0,40,0,0"/>
+            
+            <!-- Section 9 in Navigation -->
+            <syncfusion:NavigationItem Header="مساعدة" IsExpanded="False" ToolTip="مساعدة"
+            IsSelected="False" Foreground="Black" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"  SelectionBackground="#FF61CE70">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/help-circle-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+               <!-- <syncfusion:NavigationItem x:Name="WatchingVideo" Header="مشاهدة الفيديو" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="WatchingVideo_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/video-box-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>-->
+                <syncfusion:NavigationItem x:Name="Tech_Support" Header="الدعم التقني" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="Tech_Support_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/alert-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="AboutApp" Header="عن التطبيق" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="AboutApp_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/information.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem x:Name="AboutCompany" Header="عن فاست ميديا" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="AboutCompany_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/web-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <!-- <syncfusion:NavigationItem x:Name="Documentation" Header="التوثيق" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" SelectionBackground="#FF61CE70" MouseDown="Documentation_MouseDown">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/file-document-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>-->
+            </syncfusion:NavigationItem>
+            
+            <!-- Section 10 in Navigation -->
+            <syncfusion:NavigationItem x:Name="ExitApp" Header="تسجيل الخروج" Margin="0,0,0,0" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" ToolTip="خروج" MouseDown="ExitApp_MouseDown">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="images/logout-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <!--  not used
+            <syncfusion:NavigationItem Header="All Labels" ItemType="Header" />
+            <syncfusion:NavigationItem Header="Starred">
+                <syncfusion:NavigationItem.Icon>
+                    <Path Data="{StaticResource Starred}" Style="{StaticResource NavigationItemPathStyle}" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+            <syncfusion:NavigationItem Header="All mail">
+                <syncfusion:NavigationItem.Icon>
+                    <Path Data="{StaticResource AllMail}" Style="{StaticResource NavigationItemPathStyle}" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+            <syncfusion:NavigationItem Header="Trash">
+                <syncfusion:NavigationItem.Icon>
+                    <Path Data="{StaticResource Trash}" Style="{StaticResource NavigationItemPathStyle}" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+            <syncfusion:NavigationItem Header="Spam">
+                <syncfusion:NavigationItem.Icon>
+                    <Path Data="{StaticResource Spam}" Style="{StaticResource NavigationItemPathStyle}" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem> -->
+
+            <!-- Content view body-->
+            <syncfusion:SfNavigationDrawer.ContentView>
+                <Grid x:Name="mainContentView" 
+                  Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <!--welcome Text-->
+                        <StackPanel Background="White" 
+                            Orientation="Horizontal" Grid.Column="0" Margin="0,4.5,0,0">
+                            <Image Source="images/account-custom.png" Width="16" Height="13" Stretch="Fill" Margin="10,0,0,0"/>
+                            <Label x:Name="UserNameLable" 
+                           Height="40"   
+                           HorizontalContentAlignment="Center" 
+                           VerticalContentAlignment="Center" 
+                           Content="أهلا بك  !" 
+                           FontSize="16" 
+                           Padding="10,0,0,0"
+                           Foreground="Black" 
+                           Background="White" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"/>
+                        </StackPanel>
+                        <!-- Date and Time -->
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" Margin="0,4.5,0,0">
+                            <Image Source="images/calendar-account-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                            <Label  x:Name="datenow"
+                           Content="تاريخ اليوم " 
+                           FontSize="16" 
+                           Padding="10,0,0,0"
+                           Foreground="Black" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"         
+                           Background="White" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Center" Margin="0,4.5,0,0">
+                            <Image Source="images/clock-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                            <Label x:Name="timenow"
+                           Content="الوقت الحالي " 
+                           FontSize="16" 
+                           Padding="10,0,0,0"
+                           Foreground="Black" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Center"  
+                           Background="White" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" />
+                        </StackPanel>
+
+                        <!-- window elements-->
+                        <!--Maximize , Minimiz and close icons-->
+                        <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal" FlowDirection="LeftToRight">
+                            <!-- Maximize Icon-->
+                            <Image Source="images/window-maximize-custom.png" Width="18" Height="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,4.5,10,0" MouseDown="MaximizeIcon_MouseDown"/>
+                            <!-- Minimize Icon-->
+                            <Image Source="images/window-minimize-custom.png" Width="18" Height="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,4.5,10,0" MouseDown="MinimizeIcon_MouseDown"/>
+                            <!-- close Icon-->
+                            <Image Source="images/close-custom.png" Width="18" Height="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,4.5,10,0" MouseDown="CloseIcon_MouseDown"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!--Header Body Content-->
+                    <!--Separetor in Header-->
+                    <Separator Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Foreground="#f8f8f8"/>
+
+                    <!-- ****************-->
+                    <!--Content Body for Main Page-->
+                    <Grid Grid.Row="2" x:Name="BodyContent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="130" x:Name="row1"/>
+                            <RowDefinition Height="130" x:Name="row2"/>
+                            <RowDefinition Height="*" x:Name="row3"/>
+                        </Grid.RowDefinitions>
+                        
+                        <!-- View statistics about all patients , staff,and reports in one panel at Row 1-->
+                        <Grid Grid.Row="0" x:Name="statistics">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <!--Patients-->
+                            <Border BorderThickness="1" Grid.Column="0" CornerRadius="10" Background="Transparent" BorderBrush="#D0D0D0"  Margin="10,10,0,0" >
+                                <Grid x:Name="all_patients" Background="Transparent" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Image Source="images/account-circle-custom (2).png"  Stretch="Fill"/>
+                                        <Label   Content="المرضى" FontSize="16" Padding="10,0,0,0" Foreground="#D0D0D0" VerticalAlignment="Center"  HorizontalAlignment="Center"  Background="White" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"/>
+                                    </StackPanel>
+                                    <Label x:Name="CountPatients" Grid.Row="1" Content="المرضى" FontSize="20"  Foreground="Black" VerticalAlignment="Center"  HorizontalAlignment="Center"  FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" />
+                                </Grid>
+                            </Border>
+                            <!--Staff-->
+                            <Border BorderThickness="1" Grid.Column="1" CornerRadius="10" Background="Transparent" BorderBrush="#D0D0D0"  Margin="10,10,0,0" >
+                                <Grid x:Name="all_Staff" Background="Transparent" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Image Source="images/account-supervisor-circle-custom (2).png" Stretch="Fill"/>
+                                        <Label   Content="المستخدمين " FontSize="16" Padding="10,0,0,0" Foreground="#D0D0D0" VerticalAlignment="Center"  HorizontalAlignment="Center"  Background="White" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"/>
+                                    </StackPanel>
+                                    <Label x:Name="Count_Users" Grid.Row="1" Content="المستخدمين" FontSize="20"  Foreground="Black" VerticalAlignment="Center"  HorizontalAlignment="Center"  FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" />
+                                </Grid>
+                            </Border>
+                            <!--Reports-->
+                            <Border BorderThickness="1" Grid.Column="2" CornerRadius="10" Background="Transparent" BorderBrush="#D0D0D0"  Margin="10,10,10,0" >
+                                <Grid x:Name="all_reports" Background="Transparent" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Image Source="images/pencil-circle-custom (2).png"  Stretch="Fill"/>
+                                        <Label   Content="الحجوزات " FontSize="16" Padding="10,0,0,0" Foreground="#D0D0D0" VerticalAlignment="Center"  HorizontalAlignment="Center"  Background="White" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"/>
+                                    </StackPanel>
+                                    <Label x:Name="CountAppointments" Grid.Row="1" Content="الحجوزات" FontSize="20"  Foreground="Black" VerticalAlignment="Center"  HorizontalAlignment="Center"  FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" />
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                        <!-- View Quick actions for users like create new patient file - create new appointment and send sms in one panel at Row 2-->
+                        <Grid x:Name="quickbuttons" Grid.Row="1" Margin="0,20,0,0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="NewPatient" BorderThickness="1" Grid.Column="0" CornerRadius="10" Background="#f8f8f8" BorderBrush="#D0D0D0"  Margin="10,0,0,0"  >
+                                <Grid x:Name="create_patientfile" Background="Transparent" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Label  Grid.Row="1" Content="+" FontSize="30"  Foreground="#C0C0C0" VerticalAlignment="Top"  HorizontalAlignment="Center" MouseDown="NewPatient_MouseDown"/>
+                                    </StackPanel>
+                                    <Label  Grid.Row="1" Content="مريض جديد" FontSize="20"  Foreground="Black" VerticalAlignment="Top"  HorizontalAlignment="Center"  FontFamily="/WpfSideNav;component/Resources/Font/#Almarai"  MouseDown="NewPatient_MouseDown"/>
+                                </Grid>
+                            </Border>
+                            <Border x:Name="NewSession" BorderThickness="1" Grid.Column="1" CornerRadius="10" Background="#f8f8f8" BorderBrush="#D0D0D0"  Margin="10,0,0,0">
+                                <Grid x:Name="create_sessionpatient" Background="Transparent" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Label  Grid.Row="1" Content="+" FontSize="30"  Foreground="#C0C0C0" VerticalAlignment="Center"  HorizontalAlignment="Center" MouseDown="NewSession_MouseDown"/>
+                                    </StackPanel>
+                                    <Label  Grid.Row="1" Content="جلسة جديدة" FontSize="20"  Foreground="Black" VerticalAlignment="Top"  HorizontalAlignment="Center"  FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" MouseDown="NewSession_MouseDown"/>
+                                </Grid>
+                            </Border>
+                            <Border x:Name="NewAppointment" BorderThickness="1" Grid.Column="2" CornerRadius="10" Background="#f8f8f8" BorderBrush="#D0D0D0"  Margin="10,0,10,0" >
+                                <Grid x:Name="create_newappointment" Background="Transparent" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Label  Grid.Row="1" Content="+" FontSize="30"  Foreground="#C0C0C0" VerticalAlignment="Center"  HorizontalAlignment="Center" MouseDown="NewAppointment_MouseDown"/>
+                                    </StackPanel>
+                                    <Label  Grid.Row="1" Content="موعد جديد" FontSize="20"  Foreground="Black" VerticalAlignment="Top"  HorizontalAlignment="Center"  FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" MouseDown="NewAppointment_MouseDown" />
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                        <!-- View  all appointments on day in one panel at row 3-->
+                        <Border Grid.Row="2" x:Name="DGBorder" BorderBrush="#D0D0D0" BorderThickness="1" CornerRadius="25" Margin="10,20,10,20">
+                            <Grid Grid.Row="2" x:Name="datagridappointment" Margin="10,10,10,20">
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Image Source="images/calendar-account-custom_big.png" Width="40" Stretch="Fill"/>
+                                        <Label 
+                                       Content=" حجوزات اليوم" 
+                                       Margin="0,0,0,0"
+                                       FontSize="18" 
+                                       Padding="10,10,10,10"
+                                       Foreground="Black" 
+                                        FontWeight="Bold"
+                                        VerticalAlignment="Top" 
+                                        HorizontalAlignment="Left"  
+                                        Background="White" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai" />
+                                    </StackPanel>
+                                    <syncfusion:SfDataGrid x:Name="dataGrid"  
+                                          ItemsSource="{Binding Orders}" 
+                                          AutoGenerateColumns="False" Grid.Row="1" BorderBrush="Transparent" 
+                                          Margin="10,10,10,20" AllowEditing="False"  
+                                          AllowResizingColumns="True"  HeaderStyle="{StaticResource headerStyle}"
+                                          GridLinesVisibility="None" ColumnSizer="Star" CellStyle="{StaticResource customCellStyle}">
+                                        <syncfusion:SfDataGrid.Columns >
+                                            <syncfusion:GridTextColumn  HeaderText="رقم السجل"  MappingName="OrderID" />
+                                            <syncfusion:GridTextColumn HeaderText="رقم الجوال" MappingName="CustomerID" />
+                                            <syncfusion:GridTextColumn HeaderText="اسم المريض" AllowFiltering="True" MappingName="CustomerName" />
+                                            <syncfusion:GridTextColumn HeaderText="تاريخ الحجز" MappingName="Country" />
+                                            <syncfusion:GridNumericColumn HeaderText="وقت الحجز" MappingName="UnitPrice" />
+                                            <syncfusion:GridNumericColumn  HeaderText="نوع الخدمة" MappingName="UnitPrice" />
+                                        </syncfusion:SfDataGrid.Columns>
+                                    </syncfusion:SfDataGrid>
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+
+                    </Grid>
+                </Grid>
+            </syncfusion:SfNavigationDrawer.ContentView>
+
+            <!-- Header View Navigation Menu-->
+            <syncfusion:SfNavigationDrawer.ToggleButtonIconTemplate>
+                <DataTemplate>
+                    <fa:ImageAwesome Icon="Bars" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                       Foreground="#61CE70" Width="20" Height="20" x:Name="menubut"></fa:ImageAwesome>
+                </DataTemplate>
+            </syncfusion:SfNavigationDrawer.ToggleButtonIconTemplate>
+            <syncfusion:SfNavigationDrawer.ToggleButtonContentTemplate>
+                <DataTemplate>
+                   <!-- <Image Source="Images/LogoFastMedia.png" Width="150" Height="20" Margin="0,15,0,0"/>-->
+                </DataTemplate>
+            </syncfusion:SfNavigationDrawer.ToggleButtonContentTemplate>
+           
+            <!-- Footer view not used-->
+            <!-- <syncfusion:SfNavigationDrawer.FooterItems>
+                <syncfusion:NavigationItem x:Name="seperator" Margin="0,0,0,10" ItemType="Separator" />
+                <syncfusion:NavigationItem x:Name="footer" Header="تسجيل الخروج" Margin="0,0,0,0" ItemType="Button" SelectionBackground="Transparent" FontFamily="/WpfSideNav;component/Resources/Font/#Almarai">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="images/logout-custom.png" Width="16" Height="13" Stretch="Fill"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:SfNavigationDrawer.FooterItems>-->
+        </syncfusion:SfNavigationDrawer>
+
+    </Grid>
+</Window>

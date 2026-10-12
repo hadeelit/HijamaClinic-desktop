@@ -1,0 +1,121 @@
+﻿<Window x:Class="HijamaClinicManagement.PatienViews.PrintBillsMgView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:HijamaClinicManagement.PatienViews"
+        mc:Ignorable="d"
+        Title="PrintBillsMgView" Height="750" Width="300.5" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Topmost="True" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+    <ScrollViewer>
+        <Grid>
+            <!-- Craete Button For Printing-->
+            <Button  VerticalAlignment="Top" Width="70" Height="50" Margin="10" HorizontalAlignment="Right" Background="#76B82A" Click="PrintBill_Click" Style="{StaticResource ButtonStyle}">
+                <materialDesign:PackIcon Kind="Printer" Width="50" Height="40"/>
+            </Button>
+
+            <materialDesign:PackIcon  x:Name="CloseIcon_Button" Kind="Close"  Height="35" Width="32" Foreground="#76B82A" MouseDown="CloseIcon_Button_MouseDown" />
+
+            <!-- Create All Data For printing Bill-->
+            <Grid x:Name="Print">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="260" />
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+
+                <!-- Create Row 1 Header -->
+                <StackPanel Grid.Row="0" Orientation="Vertical" FlowDirection="RightToLeft" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical"  VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <TextBlock Text="فاتورة ضريبية مبسطة" FontFamily="Andalus" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        <Image x:Name="LogoHeader" Source="/HijamaClinicManagement;component/Images/mainIcon.png" Width="100" Height="80" VerticalAlignment="Bottom" Margin="0,0,0,0"/>
+                        <TextBlock Text="مركز لمسة شفاء للحجامة" FontFamily="Andalus" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        <TextBlock Text="طريق المطار-جانب البريد السعودي مقابل العثيم مول ." FontFamily="Andalus" FontSize="15"/>
+                        <TextBlock Text="للتواصل : 0507065554" FontFamily="Andalus" FontSize="15" HorizontalAlignment="Center" />
+                        <TextBlock Text="رقم سجل الضريبة : 310923847900003 " FontFamily="Andalus" FontSize="15" HorizontalAlignment="Center" />
+                        <TextBlock Text="رقم السجل التجاري :   4032249355 " FontFamily="Andalus" FontSize="15" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Create Row 2 For Part 1 of Body -->
+                <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" Margin="20">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="2*"/>
+                            <ColumnDefinition  Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <!-- Create Titles -->
+                        <StackPanel Grid.Column="1" Width="70" Margin="10" FlowDirection="RightToLeft">
+                            <TextBlock  Text="اسم المريض:" FontFamily="Andalus" FontSize="15" Width="55" HorizontalAlignment="Right"/>
+                            <TextBlock  Text="رقم الملف:" FontFamily="Andalus" FontSize="15" Width="55" HorizontalAlignment="Right"/>
+                            <TextBlock  Text="التاريخ :" FontFamily="Andalus" FontSize="15" Width="55" HorizontalAlignment="Right"/>
+                            <TextBlock  Text="رقم الفاتورة:" FontFamily="Andalus" FontSize="15" Width="55" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                        <!-- Create Values For Titles -->
+                        <StackPanel Orientation="Vertical" Margin="0,15,0,0" FlowDirection="RightToLeft">
+                            <TextBlock x:Name="PatientName" Text="هديل  :" FontFamily="Andalus" FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="FileNo" Text="رقم الملف:" FontFamily="Andalus" FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="DateBill" Text="التاريخ :" FontFamily="Andalus" FontSize="13" Margin="0,5,0,0" Width="170" HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="BillNo" Text="رقم الفاتورة:" FontFamily="Andalus"  Margin="0,2,0,0" FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <!-- Sperator-->
+                <Grid Grid.Row="2">
+                    <Rectangle Fill="Black" Height="1" Margin="5,2" Width="450"/>
+                </Grid>
+
+                <!-- Create Row 3-->
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- Create Row 3 For Part 2 of Body -->
+                    <StackPanel Grid.Column="1" Margin="0,0,0,0" FlowDirection="RightToLeft">
+                        <TextBlock  Text="المبلغ قبل الضريبة:" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Text="ضريبة القيمة المضافة" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                            <TextBlock  Text="(15%) " x:Name="Vat_Value" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center" Padding="5,0,0,0"/>
+                        </StackPanel>
+                        <TextBlock  Text="المجموع شامل الضريبة (ريال) :" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                        <TextBlock  Text="الخصم:" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                        <TextBlock  Text="المبلغ الصافي:" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                        <TextBlock  Text="المدفوع:" FontFamily="Andalus" FontSize="15" Width="40" HorizontalAlignment="Center"/>
+                        <TextBlock  Text="المتبقي:" FontFamily="Andalus" FontSize="15" Width="40" HorizontalAlignment="Center"/>
+                        <TextBlock  Text="نوع الدفع:" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                        <TextBlock  Text="قيمة الشبكة :" x:Name="network_value_lable" Visibility="Hidden" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                        <TextBlock  Text="قيمة النقدي"  x:Name="cash_value_lable" Visibility="Hidden" FontFamily="Andalus" FontSize="15"  HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Margin="0,3,0,0" FlowDirection="RightToLeft">
+                        <TextBlock x:Name="session_price" Text="150" Margin="0,0,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock x:Name="SRTaxBill" Text="22.5"  FontSize="13"  HorizontalAlignment="Left" Padding="5,0,0,0"/>
+                            <TextBlock x:Name="SR_Currency" Text="ريال"  FontSize="13"  HorizontalAlignment="Left" Padding="20,0,0,0"/>
+                        </StackPanel>
+                        <TextBlock x:Name="TotalTaxBill" Text="المجموع" Margin="0,5,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="DiscountBill" Text="الخصم" Margin="0,6,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="PaidAmount" Text="المبلغ الصافي" Margin="0,5,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="paid" Text="المدفوع:" Margin="0,7,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="Residu" Text="المتبقي:" Margin="0,7,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="Paid_Type" Text="نوع الدفع:" Margin="0,7,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="network_value" Text="قيمة الشبكة" Visibility="Hidden" Margin="0,7,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="cash_value" Text="قيمة الكاش" Visibility="Hidden" Margin="0,7,0,0"  FontSize="13" Width="170" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+                <!-- Create Footer-->
+                <Grid Grid.Row="4">
+                    <StackPanel Orientation="Vertical" FlowDirection="RightToLeft">
+                        <TextBlock Text="نشكركم على زيارتنا" FontFamily="Andalus" FontSize="25"  HorizontalAlignment="Center"/>
+                        <TextBlock Text="ونتمنى لكم الشفاء" FontFamily="Andalus" FontSize="25"  HorizontalAlignment="Center"/>
+                        <Image x:Name="QR_CodeVat" Source="/HijamaClinicManagement;component/Images/QR.png" Width="100" Height="80" VerticalAlignment="Bottom" Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>

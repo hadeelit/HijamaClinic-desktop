@@ -1,0 +1,951 @@
+﻿<UserControl x:Class="HijamaClinicManagement.PatienViews.PatientsSessionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HijamaClinicManagement.PatienViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White" FlowDirection="RightToLeft" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <!-- Restyle DatePicker-->
+        <Style x:Key="DatePickerNewStyle" TargetType="{x:Type DatePicker}">
+            <Setter Property="Foreground" Value="#FF333333"/>
+            <Setter Property="IsTodayHighlighted" Value="True"/>
+            <Setter Property="SelectedDateFormat" Value="Short"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint=".5,0" StartPoint=".5,1">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DatePicker}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="PART_DisabledVisual"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid x:Name="PART_Root" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <Grid.Resources>
+                                    <SolidColorBrush x:Key="DisabledBrush" Color="#A5FFFFFF"/>
+                                    <ControlTemplate x:Key="DropDownButtonTemplate" TargetType="{x:Type Button}">
+                                        <Grid>
+                                            <VisualStateManager.VisualStateGroups>
+                                                <VisualStateGroup x:Name="CommonStates">
+                                                    <VisualStateGroup.Transitions>
+                                                        <VisualTransition GeneratedDuration="0"/>
+                                                        <VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
+                                                        <VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
+                                                    </VisualStateGroup.Transitions>
+                                                    <VisualState x:Name="Normal"/>
+                                                    <VisualState x:Name="MouseOver">
+                                                        <Storyboard>
+                                                            <ColorAnimation Duration="0" To="#FF448DCA" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Background"/>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#7FFFFFFF"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#CCFFFFFF"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#F2FFFFFF"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                        </Storyboard>
+                                                    </VisualState>
+                                                    <VisualState x:Name="Pressed">
+                                                        <Storyboard>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Background">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#61CE70"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Highlight">
+                                                                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                            </DoubleAnimationUsingKeyFrames>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#EAFFFFFF"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#C6FFFFFF"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#6BFFFFFF"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                            <ColorAnimationUsingKeyFrames BeginTime="0" Duration="00:00:00.001" Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient">
+                                                                <SplineColorKeyFrame KeyTime="0" Value="#F4FFFFFF"/>
+                                                            </ColorAnimationUsingKeyFrames>
+                                                        </Storyboard>
+                                                    </VisualState>
+                                                    <VisualState x:Name="Disabled"/>
+                                                </VisualStateGroup>
+                                            </VisualStateManager.VisualStateGroups>
+                                            <Grid Background="#11FFFFFF" FlowDirection="LeftToRight" HorizontalAlignment="Center" Height="18" Margin="0" VerticalAlignment="Center" Width="19">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="20*"/>
+                                                    <ColumnDefinition Width="20*"/>
+                                                    <ColumnDefinition Width="20*"/>
+                                                    <ColumnDefinition Width="20*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="23*"/>
+                                                    <RowDefinition Height="19*"/>
+                                                    <RowDefinition Height="19*"/>
+                                                    <RowDefinition Height="19*"/>
+                                                </Grid.RowDefinitions>
+                                                <Border x:Name="Highlight" BorderBrush="#61CE70" BorderThickness="1" Grid.ColumnSpan="4" CornerRadius="0,0,1,1" Margin="-1" Opacity="0" Grid.Row="0" Grid.RowSpan="4"/>
+                                                <Border x:Name="Background" BorderBrush="#FFFFFFFF" BorderThickness="1" Background="#FF1F3B53" Grid.ColumnSpan="4" CornerRadius=".5" Margin="0,-1,0,0" Opacity="1" Grid.Row="1" Grid.RowSpan="3"/>
+                                                <Border x:Name="BackgroundGradient" BorderBrush="#BF000000" BorderThickness="1" Grid.ColumnSpan="4" CornerRadius=".5" Margin="0,-1,0,0" Opacity="1" Grid.Row="1" Grid.RowSpan="3">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+                                                            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                                                            <GradientStop Color="#F9FFFFFF" Offset="0.375"/>
+                                                            <GradientStop Color="#E5FFFFFF" Offset="0.625"/>
+                                                            <GradientStop Color="#C6FFFFFF" Offset="1"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Rectangle Grid.ColumnSpan="4" Grid.RowSpan="1" StrokeThickness="1">
+                                                    <Rectangle.Fill>
+                                                        <LinearGradientBrush EndPoint="0.3,-1.1" StartPoint="0.46,1.6">
+                                                            <GradientStop Color="#61CE70"/>
+                                                            <GradientStop Color="#FFAFCFEA" Offset="1"/>
+                                                        </LinearGradientBrush>
+                                                    </Rectangle.Fill>
+                                                    <Rectangle.Stroke>
+                                                        <LinearGradientBrush EndPoint="0.48,-1" StartPoint="0.48,1.25">
+                                                            <GradientStop Color="#FF494949"/>
+                                                            <GradientStop Color="#FF9F9F9F" Offset="1"/>
+                                                        </LinearGradientBrush>
+                                                    </Rectangle.Stroke>
+                                                </Rectangle>
+                                                <Path Grid.ColumnSpan="4" Grid.Column="0" Data="M11.426758,8.4305077 L11.749023,8.4305077 L11.749023,16.331387 L10.674805,16.331387 L10.674805,10.299648 L9.0742188,11.298672 L9.0742188,10.294277 C9.4788408,10.090176 9.9094238,9.8090878 10.365967,9.4510155 C10.82251,9.0929432 11.176106,8.7527733 11.426758,8.4305077 z M14.65086,8.4305077 L18.566387,8.4305077 L18.566387,9.3435936 L15.671368,9.3435936 L15.671368,11.255703 C15.936341,11.058764 16.27293,10.960293 16.681133,10.960293 C17.411602,10.960293 17.969301,11.178717 18.354229,11.615566 C18.739157,12.052416 18.931622,12.673672 18.931622,13.479336 C18.931622,15.452317 18.052553,16.438808 16.294415,16.438808 C15.560365,16.438808 14.951641,16.234707 14.468243,15.826504 L14.881817,14.929531 C15.368796,15.326992 15.837872,15.525723 16.289043,15.525723 C17.298809,15.525723 17.803692,14.895514 17.803692,13.635098 C17.803692,12.460618 17.305971,11.873379 16.310528,11.873379 C15.83071,11.873379 15.399232,12.079271 15.016094,12.491055 L14.65086,12.238613 z" Fill="#FF2F2F2F" HorizontalAlignment="Center" Margin="4,3,4,3" Grid.Row="1" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5" Stretch="Fill" VerticalAlignment="Center"/>
+                                                <Ellipse Grid.ColumnSpan="4" Fill="#FFFFFFFF" HorizontalAlignment="Center" Height="3" StrokeThickness="0" VerticalAlignment="Center" Width="3"/>
+                                                <Border x:Name="DisabledVisual" BorderBrush="#B2FFFFFF" BorderThickness="1" Grid.ColumnSpan="4" CornerRadius="0,0,.5,.5" Opacity="0" Grid.Row="0" Grid.RowSpan="4"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="PART_Button" Grid.Column="1" Foreground="{TemplateBinding Foreground}" Focusable="False" HorizontalAlignment="Left" Margin="3,0,3,0" Grid.Row="0" Template="{StaticResource DropDownButtonTemplate}" VerticalAlignment="Top" Width="20"/>
+                                <DatePickerTextBox x:Name="PART_TextBox" Grid.Column="0" Focusable="{TemplateBinding Focusable}" HorizontalContentAlignment="Stretch" Grid.Row="0" VerticalContentAlignment="Stretch"/>
+                                <Grid x:Name="PART_DisabledVisual" Grid.ColumnSpan="2" Grid.Column="0" IsHitTestVisible="False" Opacity="0" Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Rectangle Grid.Column="0" Fill="#A5FFFFFF" RadiusY="1" Grid.Row="0" RadiusX="1"/>
+                                    <Rectangle Grid.Column="1" Fill="#A5FFFFFF" Height="18" Margin="3,0,3,0" RadiusY="1" Grid.Row="0" RadiusX="1" Width="19"/>
+                                    <Popup x:Name="PART_Popup" AllowsTransparency="True" Placement="Bottom" PlacementTarget="{Binding ElementName=PART_TextBox}" StaysOpen="False"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Source={x:Static SystemParameters.HighContrast}}" Value="false">
+                                <Setter Property="Foreground" TargetName="PART_TextBox" Value="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style For Radio Buttons-->
+        <Style x:Key="FocusVisual2">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="RadioButton.Static.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="RadioButton.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="RadioButton.MouseOver.Background" Color="#FFF3F9FF"/>
+        <SolidColorBrush x:Key="RadioButton.MouseOver.Border" Color="#76B82A"/>
+        <SolidColorBrush x:Key="RadioButton.MouseOver.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="RadioButton.Disabled.Background" Color="#FFE6E6E6"/>
+        <SolidColorBrush x:Key="RadioButton.Disabled.Border" Color="#FFBCBCBC"/>
+        <SolidColorBrush x:Key="RadioButton.Disabled.Glyph" Color="#FF707070"/>
+        <SolidColorBrush x:Key="RadioButton.Pressed.Background" Color="#FFD9ECFF"/>
+        <SolidColorBrush x:Key="RadioButton.Pressed.Border" Color="#76B82A"/>
+        <SolidColorBrush x:Key="RadioButton.Pressed.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="RadioButton.Static.Glyph" Color="#FF212121"/>
+        <Style x:Key="RadioButtonStyle" TargetType="{x:Type RadioButton}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="radioButtonBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,1,2,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <Grid x:Name="markGrid" Margin="2">
+                                    <Ellipse x:Name="optionMark" Fill="{StaticResource RadioButton.Static.Glyph}" MinWidth="6" MinHeight="6" Opacity="0"/>
+                                </Grid>
+                            </Border>
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasContent" Value="true">
+                                <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}"/>
+                                <Setter Property="Padding" Value="4,-1,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Disabled.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Pressed.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="{x:Null}">
+                                <Setter Property="Opacity" TargetName="optionMark" Value="0.56"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="MainWindowBody" FlowDirection="RightToLeft">
+        <!-- Physical Examination View-->
+        <Grid  x:Name="Physical_ExContent" Visibility="Hidden" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <TextBlock Text="معلومات المريض:" Height="26" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,5,0,0" FontSize="16"/>
+                <StackPanel   Orientation="Horizontal"   HorizontalAlignment="Stretch" Margin="5,0,0,0">
+                    <TextBlock   Text="رقم الملف" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="220" IsReadOnly="True"  Height="24" x:Name="PatientFileNumField"  Foreground="Black" Padding="0,5" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,0" HorizontalAlignment="Stretch">
+                    <TextBlock   Text="اسم المريض" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="220" IsReadOnly="True" Height="24" x:Name="PatientNameField"  FlowDirection="RightToLeft"  Foreground="Black"  Margin="5,0,0,0" MaxLength="50" Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+            </StackPanel>
+            <!-- Create Fields in Row2-->
+            <Grid Grid.Row="1" x:Name="PatientPhysical_ExBody">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!-- Buttons in view-->
+                <StackPanel Grid.Column="2" Orientation="Vertical">
+                    <!-- Items For Group 6-->
+                    <Button x:Name="PainArea_Button"   Content="مكان الألم"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3"  BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="PainArea_Button_Click"/>
+                    <Button x:Name="TreatmentPlan_Button" Content="خطة العلاج"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3"  BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="TreatmentPlan_Button_Click"/>
+                    <Button x:Name="AddButton_PatientPhysical_Ex"   Content="اضافة" IsEnabled="False" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="AddButton_PatientPhysical_Ex_Click"/>
+                    <Button x:Name="DeleteButton_PatientPhysical_Ex"   Content="حذف"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="DeleteButton_PatientPhysical_Ex_Click"/>
+                    <Button x:Name="EdieButton_PatientPhysical_Ex"   Content="تعديل"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="EdieButton_PatientPhysical_Ex_Click"/>
+                    <Button x:Name="ClearButton_PatientPhysical_Ex"   Content="مسح"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="ClearButton_PatientPhysical_Ex_Click"/>
+                </StackPanel>
+                
+                <!-- Info For Session in Row1 col 0-->
+                <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0,0,0,0">
+                    <TextBlock Text="معلومات الجلسة:" Height="26" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,5,0,0"/>
+                    <StackPanel   Orientation="Horizontal" Margin="0,15,0,0"  HorizontalAlignment="Stretch">
+                        <TextBlock   Text="رقم الجلسة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="0,0,0,0"/>
+                        <TextBox Width="200" IsReadOnly="True" Height="24" x:Name="PatientSessionNumField"  Foreground="Black" Margin="9,0,0,0"  Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" Margin="0,5,0,0"  HorizontalAlignment="Stretch">
+                        <TextBlock   Text="التاريخ" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <DatePicker Width="200"  Height="24" Focusable="False" x:Name="PatientSessionDateField"  FlowDirection="RightToLeft"  Foreground="Black"  Margin="42,0,0,0" Style="{DynamicResource DatePickerNewStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" Margin="0,5,0,0"  HorizontalAlignment="Stretch">
+                        <TextBlock   Text="مدة الجلسة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <TextBox Width="200"  Height="24" x:Name="PatientSessionPeriodField"  FlowDirection="RightToLeft"  Foreground="Black"  Margin="5,0,0,0" MaxLength="30" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Stretch">
+                        <TextBlock   Text="العرض الحالي" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="0,0,0,0"/>
+                        <TextBox Width="200"  Height="50" x:Name="PatientComplaintsField"  FlowDirection="RightToLeft" TextWrapping="Wrap" Foreground="Black" Margin="0,0,0,0"  MaxLength="50" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Stretch">
+                        <TextBlock   Text="المضاعفات" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <TextBox Width="200"  Height="50" x:Name="ComplicationsField"  FlowDirection="RightToLeft" TextWrapping="Wrap"  Foreground="Black" Margin="10,0,0,0"  MaxLength="50" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+                
+                <!-- Info For Physical Examination in Row1 col 1-->
+                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="15,0,0,0">
+                    <TextBlock Text="معلومات الفحص السريري:" Height="26" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16"  Margin="0,5,0,0"/>
+                    <!-- Items For Group 1-->
+                    <StackPanel   Orientation="Horizontal" Margin="0,15,0,0"  HorizontalAlignment="Stretch">
+                        <TextBlock   Text="درجة الحرارة"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" FontSize="16" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <TextBox    Text="37" Width="60"  Height="24" x:Name="TempField"  Foreground="Black" Padding="0,3" Margin="23,0,0,0"  Style="{DynamicResource TextBoxStyle}" PreviewTextInput="Decimal_PreviewTextInput"/>
+                        <TextBlock   Text="معدل النبض"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="8,0,0,0"/>
+                        <TextBox     Width="60"  Height="24" x:Name="HRField"  Foreground="Black" Padding="0,3" Margin="13,0,0,0" Style="{DynamicResource TextBoxStyle}" PreviewTextInput="Decimal_PreviewTextInput"/>
+                    </StackPanel>
+                    <!-- Items For Group 2-->
+                    <StackPanel   Orientation="Horizontal" Margin="0,5,0,0"  HorizontalAlignment="Stretch">
+                        <TextBlock   Text="معدل التنفس"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <TextBox     Width="60"  Height="24" x:Name="RRField"  Foreground="Black" Padding="0,3" Margin="5,0,0,0"  Style="{DynamicResource TextBoxStyle}" PreviewTextInput="Decimal_PreviewTextInput"/>
+                        <TextBlock   Text="ضغط الدم"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="9,0,0,0"/>
+                        <TextBox    Text="120/80" Width="60"  Height="24" x:Name="BpField" MaxLength="30" Foreground="Black" Padding="0,3" Margin="26,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <!-- Items For Group 3-->
+                    <StackPanel   Orientation="Horizontal"  HorizontalAlignment="Stretch" Margin="0,5,0,0">
+                        <TextBlock   Text="الرأس و الرقبة"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <TextBox    Text="Normal" Width="60"  Height="24" x:Name="HeadNeckField" MaxLength="20" Foreground="Black" Padding="0,3" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                        <TextBlock   Text="الصدر و الظهر"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="9,0,0,0"/>
+                        <TextBox    Text="Normal" Width="60"  Height="24" x:Name="ChestBackField" MaxLength="20" Foreground="Black" Padding="0,3" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <!-- Items For Group 4-->
+                    <StackPanel   Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Stretch">
+                        <TextBlock   Text="البطن"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <TextBox    Text="Normal" Width="60"  Height="24" x:Name="AbdomenField" MaxLength="20" Foreground="Black" Padding="0,3" Margin="55,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                        <TextBlock   Text="الحوض"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="9,0,0,0"/>
+                        <TextBox    Text="Normal" Width="60"  Height="24" x:Name="PelvisField" MaxLength="20" Foreground="Black" Padding="0,3" Margin="52,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <!-- Items For Group 5-->
+                    <StackPanel   Orientation="Horizontal" Margin="0,5,0,0"  HorizontalAlignment="Stretch">
+                        <TextBlock   Text="الاطراف العلوية والسفلية"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                        <TextBox    Text="Normal" Width="60"  Height="24" x:Name="UpperLowerLimbsField" MaxLength="20" Foreground="Black" Padding="0,3" Margin="98,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel   Orientation="Horizontal" Margin="0,5,0,0"  HorizontalAlignment="Stretch">
+                        <TextBlock   Text="أخرى"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="9,0,0,0"/>
+                        <TextBox    Text="Normal" Width="60"  Height="24" x:Name="OthersField" MaxLength="30" Foreground="Black" Padding="0,3" Margin="227,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                   
+                </StackPanel>
+                <Grid Grid.Row="2">
+                </Grid>
+            </Grid>
+            <!-- Create Serch Panel-->
+            <Grid Grid.Row="2" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <!-- Search Fields-->
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock Text="ابحث حسب" VerticalAlignment="Center"  Foreground="#FF5D5D61"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Padding="3,0,0,0"/>
+                    <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                        <StackPanel Orientation="Vertical">
+                            <TextBox x:Name="SearchPatientFileNum" Width="210"  BorderThickness="0" Style="{DynamicResource TextBoxStyle}" GotFocus="PatientFileNum_GotFocus" PreviewTextInput="SearchPatientFileNum_PreviewTextInput"/>
+                            <StackPanel Height="2" Background="#FF5D5D61"  Margin="0,4,0,0"/>
+                        </StackPanel>
+                        <Button x:Name="SearchPatientFileNum_Button" Width="50" Height="25" Content="ابحث" Margin="0,0,0,0" Foreground="Black" Background="#76B82A" Click="SearchPatientFileNum_Button_Click" Style="{DynamicResource ButtonStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+                <!-- Search Fields-->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="20,0,0,0">
+                    <TextBlock Text="ابحث حسب" VerticalAlignment="Center"  Foreground="#FF5D5D61"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Padding="3,0,0,0"/>
+                    <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                        <StackPanel Orientation="Vertical">
+                            <TextBox x:Name="SearchMobileNum" Width="210"  BorderThickness="0" Style="{DynamicResource TextBoxStyle}" GotFocus="PatientMobileNum_GotFocus" PreviewTextInput="NumberField_PreviewTextInput"/>
+                            <StackPanel Height="2" Background="#FF5D5D61"  Margin="0,4,0,0"/>
+                        </StackPanel>
+                        <Button x:Name="SearchMobileNum_Button" Width="50" Height="25" Content="ابحث" Foreground="Black" Background="#76B82A" Click="SearchMobileNum_Button_Click" Style="{DynamicResource ButtonStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+            <!-- Create DataViewFromPatientTable in Row3 For Multi Mobile Number and Multi Records-->
+            <DataGrid Grid.Row="3" x:Name="DataViewFromPatientTable" IsReadOnly="True" Visibility="Visible" AutoGenerateColumns="False" SelectionMode="Single" Style="{DynamicResource DataGridStyle}" MouseDoubleClick="DataViewFromPatientTable_MouseDoubleClick" Margin="0,3,0,0">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="Patient_ID" Width="100"  Header="رقم الملف" Binding="{Binding FileNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Date" Width="100"  Header="التاريخ" Binding="{Binding Path=FileDate, StringFormat='dd-MM-yyyy'}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Name" Width="150"  Header="اسم المريض" Binding="{Binding PatientName}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Nationality" Width="150" Header="رقم الهوية" Binding="{Binding NationalNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_MobileN" Width="150"  Header="رقم الجوال" Binding="{Binding ContactNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Age" Width="60"  Header="العمر" Binding="{Binding Age}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Gender" Width="50"  Header="الجنس" Binding="{Binding Gender}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Mstatus" Width="100"  Header="الوضع الإجتماعي" Binding="{Binding MaritalStatus}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Address" Width="100"  Header="العنوان" Binding="{Binding Address}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Job" Width="100"  Header="الوظيفة" Binding="{Binding Job}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_JpbAddress" Width="100"  Header="عنوان العمل" Binding="{Binding JobAddress}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_Email" Width="100"  Header="الإيميل" Binding="{Binding Email}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Patient_PnameForEmergency" Width="*"  Header="اسم للطوارئ" Binding="{Binding PnameForEmergency}" Foreground="#FF5D5D61"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Create DataViewFromSessionTable And Physical Ex in Row3 For Specific Patient Record-->
+            <DataGrid Grid.Row="3"  x:Name="DataViewFromPhysicalExTable" Visibility="Hidden" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Single" Style="{DynamicResource DataGridStyle}" MouseDoubleClick="DataViewFromPhysicalExTable_MouseDoubleClick" Margin="0,3,0,0">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="ID" Width="100"  Header="رقم السجل" Binding="{Binding SessionId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Session_Num" Width="100"  Header="رقم الجلسة" Binding="{Binding SessionNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Session_Date" Width="150"  Header="تاريخ الجلسة" Binding="{Binding Path=SessionDate , StringFormat='dd-MM-yyyy'}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Complaints" Width="100"  Header="الأعراض الحالية" Binding="{Binding CurrentCopmlaints}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Complications" Width="100"  Header="المضاعفات" Binding="{Binding Complications}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Session_Duration" Width="100"  Header="مدة الجلسة" Binding="{Binding SessionDuration}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Temp" Width="80" Header="درجة الحرارة" Binding="{Binding Temp}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="HR" Width="80"  Header="معدل النبض" Binding="{Binding Hr}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="RR" Width="80"  Header="معدل التنفس" Binding="{Binding Rr}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Bp" Width="80"  Header="ضغط الدم" Binding="{Binding Bp}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="HeadNeck" Width="86"  Header="الرأس والرقبة" Binding="{Binding HeadAndNeck}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="ChestBack" Width="86"  Header="الصدر والظهر" Binding="{Binding ChestAndBack}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Abdomen" Width="86"  Header="البطن" Binding="{Binding Abdomen}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Pelvis" Width="86"  Header="الحوض" Binding="{Binding Pelvis}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="UpperLowerLimbs" Width="150"  Header="الاطراف العلوية والسفلية" Binding="{Binding UpperAndLowerLimbs}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="Others" Width="*"  Header="أخرى" Binding="{Binding Others}" Foreground="#FF5D5D61"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <!-- Contraindications Of Cupping View-->
+        <Grid   x:Name="Contraindications_CuppingContent" Visibility="Hidden" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- Header-->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" >
+                <TextBlock Text="معلومات المريض:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  VerticalAlignment="Center"/>
+                <StackPanel   Orientation="Horizontal"  HorizontalAlignment="Stretch" Margin="2,0,0,0">
+                    <TextBlock   Text="رقم الملف" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="PFileNumField"  Foreground="Black" Padding="0,5" Margin="5,0,0,0"  Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel   Orientation="Horizontal"  HorizontalAlignment="Stretch" Margin="0,0,0,0">
+                    <TextBlock   Text="رقم الجلسة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="PSessionNumField"  Foreground="Black" Padding="0,5" Margin="5,0,0,0"  Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel   Orientation="Horizontal"   HorizontalAlignment="Stretch" Margin="0,0,0,0">
+                    <TextBlock   Text="رقم السجل" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="PContraindicationNumField"  Foreground="Black" Padding="0,5" Margin="5,0,0,0"   Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+            </StackPanel>
+            <!-- Create Body-->
+            <Grid Grid.Row="1" x:Name="Contraindications_CuppingBody">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition  Width="auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!-- Create Buttons-->
+                <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Vertical">
+                    <Button x:Name="AddButton_Contraindications_Cupping"   Content="اضافة" IsEnabled="False" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="AddButton_Contraindications_Cupping_Click"/>
+                    <Button x:Name="DeleteButton_Contraindications_Cupping"   Content="حذف"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="DeleteButton_Contraindications_Cupping_Click"/>
+                    <Button x:Name="EdieButton_Contraindications_Cupping"   Content="تعديل"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="EdieButton_Contraindications_Cupping_Click"/>
+                </StackPanel>
+                <!--Create Row 1 Col 0-->
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical"  HorizontalAlignment="Stretch">
+                    <!-- Item 1-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,15,0,15">
+                        <TextBlock Text="مرض السكر:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="23,0,0,0"/>
+                        <RadioButton x:Name="Diabetes_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="Diabetes_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"  Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 2-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,0,0,15">
+                        <TextBlock Text="الفشل الكلوي:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="RenalF_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="RenalF_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 3-->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                        <TextBlock Text="الحمل:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="65,0,0,0"/>
+                        <RadioButton x:Name="Pregnancy_Found" VerticalAlignment="Center" Margin="10,2,0,0"  Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="Pregnancy_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"  Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 4-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,0,0,15">
+                        <TextBlock Text="دوالي الساقين:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="VaricoseV_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="VaricoseV_NotFound" VerticalAlignment="Center" Margin="15,2,0,0"   Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 5-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,0,0,15">
+                        <TextBlock Text="منظم ضربات القلب:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="Pacemaker_Found" VerticalAlignment="Center" Margin="10,2,0,0"  Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+                        <RadioButton x:Name="Pacemaker_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"  Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                   
+                </StackPanel>
+                <!--Create Row 1 Col 1-->
+                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+                    <!-- Item 6-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,15,0,15">
+                        <TextBlock Text="أمراض و أدوية سيولة الدم:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="40,0,0,0"/>
+                        <RadioButton x:Name="BleedingD_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <RadioButton x:Name="BleedingD_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 7-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,0,0,15">
+                        <TextBlock Text="مرض نقص المناعة المكتسب:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="18,0,0,0"/>
+                        <RadioButton x:Name="Aids_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <RadioButton x:Name="Aids_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"  Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 8-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,0,0,15">
+                        <TextBlock Text="الالتهاب الكبدي/ الفشل الكبدي:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <RadioButton x:Name="LiverF_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <RadioButton x:Name="LiverF_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 9-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,0,0,15">
+                        <TextBlock Text="الاطفال اقل من 12 سنة:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="55,0,0,0"/>
+                        <RadioButton x:Name="ChildrenB12_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <RadioButton x:Name="ChildrenB12_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                    <!-- Item 10-->
+                    <StackPanel Orientation="Horizontal"  Margin="0,1,0,0">
+                        <TextBlock Text="السرطان/العلاج الكيماوي/الإشعاعي:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock Text="يوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <RadioButton x:Name="Cancer_Found" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" />
+                        <TextBlock Text="لايوجد" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <RadioButton x:Name="Cancer_NotFound" VerticalAlignment="Center" Margin="10,2,0,0"   Style="{DynamicResource RadioButtonStyle}" IsChecked="True"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+            <!-- Create DataView From Patient and SessionTable in Row3-->
+            <DataGrid Grid.Row="2" x:Name="DataGv_Contraindications_Cupping" Visibility="Visible"
+               IsReadOnly="True" AutoGenerateColumns="False" Margin="0,10,0,0" SelectionMode="Single" Style="{DynamicResource DataGridStyle}" MouseDoubleClick="DataGv_Contraindications_Cupping_MouseDoubleClick">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="Sessionid" Width="150"  Header="رقم السجل" Binding="{Binding SessionId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="PatientSession_Date" Width="150"  Header="تاريخ الجلسة"  Binding="{Binding Path=SessionDate , StringFormat='dd-MM-yyyy'}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn x:Name="PatientSession_Num" Width="150"  Header="رقم الجلسة" Binding="{Binding SessionNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="رقم سجل محاذير الحجامة" Binding="{Binding ContraindicationId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="مرض السكر" Binding="{Binding Diabetes}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الفشل الكلوي" Binding="{Binding RenalFailure}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الحمل" Binding="{Binding Pregnancy}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="منظم ضربات القلب" Binding="{Binding Pacemaker}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="دوالي الساقين" Binding="{Binding VaricoseVeins}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="أمراض و أدوية سيولة" Binding="{Binding BleedingDisordersAndAnticoagulants}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="مرض نقص المناعة المكتسب" Binding="{Binding Aids}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الفشل الكبدي" Binding="{Binding LiverFailureOrHepAtitis}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="أطفال أقل من 12" Binding="{Binding ChildrenBelow12Years}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="*"  Header="السرطان - علاج اشعاعي - كيماوي" Binding="{Binding ChemoOrCancer}" Foreground="#FF5D5D61"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <!-- Medical_History View-->
+        <Grid   x:Name="Midical_HistoryContent" Visibility="Hidden" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" >
+                <TextBlock Text="معلومات المريض:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" VerticalAlignment="Center"/>
+                <StackPanel   Orientation="Horizontal"  HorizontalAlignment="Stretch" Margin="2,0,0,0">
+                    <TextBlock   Text="رقم الملف" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="MHFileNumField"  Foreground="Black" Padding="0,5" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,0" HorizontalAlignment="Stretch">
+                    <TextBlock   Text="رقم الجلسة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="MHSessionNumField"  FlowDirection="RightToLeft"  Foreground="Black" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,0" HorizontalAlignment="Stretch">
+                    <TextBlock   Text="رقم السجل" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="MHNumField"  FlowDirection="RightToLeft"  Foreground="Black" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+            </StackPanel>
+            <!-- Create Form -->
+            <Grid Grid.Row="1" x:Name="Medical_HistoryBody">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!-- Create Buttons-->
+                <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Vertical" Margin="0,15,0,0">
+                    <Button x:Name="AddButton_Medical_History"   Content="اضافة"  IsEnabled="False" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="AddButton_Medical_History_Click"/>
+                    <Button x:Name="DeleteButton_Medical_History"   Content="حذف"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="DeleteButton_Medical_History_Click"/>
+                    <Button x:Name="EdieButton_Medical_History"   Content="تعديل"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="EdieButton_Medical_History_Click"/>
+                </StackPanel>
+                <!-- Create Form-->
+                <StackPanel Orientation="Vertical" Grid.Row="1">
+                    <!-- Item1-->
+                    <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                        <TextBlock Text="ماهو العرض الحالي الذي تشعر به وأتى بك إلى عيادة الحجامة ؟"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,10,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox Width="500" Height="30" x:Name="CurrentSymptom"  TextWrapping="Wrap"  MaxLength="100" Foreground="Black" Padding="0,8,0,0" Margin="0,5,180,5" Style="{DynamicResource TextBoxStyle}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item2-->
+                        <TextBlock Text="متى بدأ الألم ؟"   HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="Onset"  Width="260" Height="30" TextWrapping="Wrap"  MaxLength="20" Margin="5,0,0,0" Foreground="Black" Style="{DynamicResource TextBoxStyle}" />
+                        <!-- Item3-->
+                        <TextBlock Text="مكان الألم :"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="Location" Height="30" Width="260" TextWrapping="Wrap" MaxLength="50" Foreground="Black" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item4-->
+                        <TextBlock Text="مدة الألم:"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61" />
+                        <TextBox x:Name="Duration" Text="من 10 إلى 30 دقيقة" Height="30" Width="260" MaxLength="30" TextWrapping="Wrap" Foreground="Black" Margin="24,0,0,0" Padding="0,6,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                        <!-- Item5-->
+                        <TextBlock Text="وصف الألم :"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61" />
+                        <TextBox x:Name="Character" Text="متواصل" Height="30" Width="260" TextWrapping="Wrap" MaxLength="10" Foreground="Black" Padding="0,6,0,0" Margin="0,0,0,0" Style="{DynamicResource TextBoxStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item6-->
+                        <TextBlock Text="التوقيت:"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61" />
+                        <TextBox x:Name="Timing" Height="30" Width="260" TextWrapping="Wrap" MaxLength="20" Foreground="Black" Padding="0,8,0,0" Margin="29,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                        <!-- Item6-->
+                        <TextBlock Text="الشدة:"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="Severity"  Height="30" Width="260" TextWrapping="Wrap" MaxLength="20" Foreground="Black" Padding="0,8,0,0" Margin="25,0,0,0" Style="{DynamicResource TextBoxStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item9-->
+                        <TextBlock Text="أعراض الحساسية:"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="Allergies" Height="30" Width="260" TextWrapping="Wrap" MaxLength="30" Foreground="Black" Padding="0,8,0,0" Margin="3,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                        <!-- Item10-->
+                        <TextBlock Text="أدوية سابقة و حالية:"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="Medications"  Height="30" Width="230" TextWrapping="Wrap" MaxLength="50" Foreground="Black" Padding="0,8,0,0" Margin="3,0,0,0" Style="{DynamicResource TextBoxStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item8-->
+                        <TextBlock Text="العوامل المؤثرة على شدة أو تخفيف الألم ؟"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="AggravatingFactors" Height="30" Width="466" TextWrapping="Wrap" MaxLength="50" Foreground="Black" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item11-->
+                        <TextBlock Text="تاريخ العمليات الجراحية / حجامة"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="PastSurgicalOrCuppingHistory" Height="30" Width="466" TextWrapping="Wrap" MaxLength="30" Foreground="Black" Margin="62,0,0,0" Style="{DynamicResource TextBoxStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item12-->
+                        <TextBlock Text="هل هناك شكوى أخرى ؟ اذكرها ؟"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                        <TextBox x:Name="OthersComplaints" Height="30" Width="466" TextWrapping="Wrap" MaxLength="50" Foreground="Black" Margin="50,0,0,0" Style="{DynamicResource TextBoxStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item13-->
+                        <TextBlock Text="هل استشرت طبيباً؟ ماهو التشخيص والأدوية الموصى بها؟"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" Foreground="#FF5D5D61"/>
+                    </StackPanel>
+                    <TextBox x:Name="CounsultAdoctor" Height="30"  TextWrapping="Wrap" MaxLength="100" Foreground="Black" Margin="5,0,0,5" Style="{DynamicResource TextBoxStyle}" />
+                </StackPanel>
+            </Grid>
+
+            <!-- Create DataView From Patient and SessionTable in Row3-->
+            <DataGrid Grid.Row="2" x:Name="DataGv_MedicalH"  IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Single" Style="{DynamicResource DataGridStyle}" MouseDoubleClick="DataGv_MedicalH_MouseDoubleClick">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Width="100"  Header="رقم السجل" Binding="{Binding SessionId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="تاريخ الجلسة" Binding="{Binding Path=SessionDate , StringFormat='dd-MM-yyyy'}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="رقم الجلسة" Binding="{Binding SessionNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="رقم سجل التاريخ  المرضي" Binding="{Binding MedicalHistoryId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="العرض الحالي" Binding="{Binding MainSymptoms}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="متى بدأ" Binding="{Binding OnsetOfPain}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="مكان الألم" Binding="{Binding LocationOfPain}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="مدة الألم" Binding="{Binding DurationOfPain}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="وصف الألم" Binding="{Binding CharacterOfPain}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="العوامل المؤثرة" Binding="{Binding AggravatingAndRelievingFactorsOnPain}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="التوقيت" Binding="{Binding Timing}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الشدة" Binding="{Binding Severity}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="أعراض الحساسية" Binding="{Binding Allergies}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الأدوية السابقة والحالية" Binding="{Binding Medications}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="تاريخ العمليات" Binding="{Binding PastSurgicalOrCuppingHistory}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="شكوى أخرى" Binding="{Binding AnotherComplaints}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="*"  Header="استشارت طبيب" Binding="{Binding ConsultationWithDoctor}" Foreground="#FF5D5D61"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <!-- PastMedical_History View-->
+        <Grid   x:Name="PastMidical_HistoryContent" Visibility="Hidden" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- Headerin Row 0-->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" >
+                <TextBlock Text="معلومات المريض:"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <StackPanel   Orientation="Horizontal"  HorizontalAlignment="Stretch" Margin="2,0,0,0">
+                    <TextBlock   Text="رقم الملف" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="0,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="PMHFileNumField"  Foreground="Black" Padding="0,5" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,0"  HorizontalAlignment="Stretch">
+                    <TextBlock   Text="رقم الجلسة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="PMHSNumField"  FlowDirection="RightToLeft"  Foreground="Black"  Margin="5,0,0,0"  Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,0"  HorizontalAlignment="Stretch">
+                    <TextBlock   Text="رقم السجل" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="PMHNumField"  FlowDirection="RightToLeft"  Foreground="Black"  Margin="5,0,0,0"  Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+            </StackPanel>
+            <!--Row 1 -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!-- Buttons in Col 1-->
+                <StackPanel Grid.Column="1"  Orientation="Vertical" Margin="0,10,0,0">
+                    <Button x:Name="AddButton_PMH" IsEnabled="False"  Content="اضافة"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="AddButton_PMH_Click"/>
+                    <Button x:Name="DeleteButton_PMH"   Content="حذف"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="DeleteButton_PMH_Click"/>
+                    <Button x:Name="EdieButton_PMH"   Content="تعديل"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="EdieButton_PMH_Click"/>
+                </StackPanel>
+                <!-- info in Col 0-->
+                <StackPanel Orientation="Vertical">
+                    <!-- Header For Table-->
+                    <StackPanel x:Name="HeaderInTable" Orientation="Horizontal"  Margin="0,5,0,0">
+                        <StackPanel  Orientation="Horizontal"  Margin="180,0,0,0">
+                            <TextBlock Text="أنت" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="#FF5D5D61" Margin="5,0,0,0"/>
+                            <TextBlock Text="العائلة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="#FF5D5D61" Margin="40,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" Width="150" Margin="210,0,0,0">
+                            <TextBlock Text="أنت" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="#FF5D5D61"/>
+                            <TextBlock Text="العائلة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="#FF5D5D61" Margin="40,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <!-- Body in col 0-->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item1-->
+                        <TextBlock x:Name="BleedingD_PMH" Text="أمراض بالدم أو سيولة"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="BleedingD_You" VerticalAlignment="Center" Margin="39,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="BleedingD_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <!-- Item2-->
+                        <TextBlock x:Name="HyperTention_PMH" Text="ارتفاع ضغط الدم "  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="#FF5D5D61" Margin="70,0,0,0"/>
+                        <CheckBox x:Name="HyperTentio_You" VerticalAlignment="Center" Margin="40,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="HyperTentio_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item3-->
+                        <TextBlock x:Name="CardiacD_PMH" Text="امراض القلب "   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="CardiacD_You" VerticalAlignment="Center" Margin="89,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="CardiacD_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <!-- Item4-->
+                        <TextBlock x:Name="Diabetes_PMH" Text="مرض السكري " FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  Foreground="#FF5D5D61" Margin="70,0,0,0"/>
+                        <CheckBox x:Name="Diabetes_You" VerticalAlignment="Center" Margin="58,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Diabetes_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item5-->
+                        <TextBlock x:Name="Hepatitis_PMH" Text="الالتهاب الكبدي"   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="Hepatitis_You" VerticalAlignment="Center" Margin="78,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Hepatitis_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <!-- Item6-->
+                        <TextBlock x:Name="Aids_PMH" Text="الإيدز"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="#FF5D5D61" Margin="70,0,0,0"/>
+                        <CheckBox x:Name="Aids_You" VerticalAlignment="Center" Margin="119,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Aids_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item7-->
+                        <TextBlock x:Name="Cva_PMH" Text="الجلطات الدماغية"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="Cva_You" VerticalAlignment="Center" Margin="65,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Cva_Family" VerticalAlignment="Center" Margin="60,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <!-- Item8-->
+                        <TextBlock x:Name="Tb_PMH" Text="الدرن"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Foreground="#FF5D5D61" Margin="70,0,0,0"/>
+                        <CheckBox x:Name="Tb_You" VerticalAlignment="Center" Margin="117,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Tb_Family" VerticalAlignment="Center" Margin="60,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item9-->
+                        <TextBlock x:Name="Epilepsy_PMH" Text="الصرع"   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="Epilepsy_You" VerticalAlignment="Center" Margin="138,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Epilepsy_Family" VerticalAlignment="Center" Margin="61,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <!-- Item10-->
+                        <TextBlock x:Name="Kidney_PMH" Text="أمراض بالكلى"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Foreground="#FF5D5D61" Margin="70,0,0,0"/>
+                        <CheckBox x:Name="Kidney_You" VerticalAlignment="Center" Margin="67,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Kidney_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item11-->
+                        <TextBlock x:Name="PsychiatricD_PMH" Text="أمراض نفسية"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="PsychiatricD_You" VerticalAlignment="Center" Margin="84,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="PsychiatricD_Family" VerticalAlignment="Center" Margin="60,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <!-- Item12-->
+                        <TextBlock x:Name="Cancer_PMH" Text="السرطان"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Foreground="#FF5D5D61" Margin="70,0,0,0"/>
+                        <CheckBox x:Name="Cancer_You" VerticalAlignment="Center" Margin="94,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Cancer_Family" VerticalAlignment="Center" Margin="59,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                        <!-- Item13-->
+                        <TextBlock x:Name="Anemia_PMH" Text="فقر الدم أو الأنيميا"   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="Anemia_You" VerticalAlignment="Center" Margin="60,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <CheckBox x:Name="Anemia_Family" VerticalAlignment="Center" Margin="60,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                        <!-- Item14-->
+                        <TextBlock x:Name="Smoking_PMH" Text="التدخين"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Foreground="#FF5D5D61" Margin="70,0,0,0"/>
+                        <CheckBox x:Name="Smoking_You" VerticalAlignment="Center" Margin="107,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" >
+                        <!-- Item15-->
+                        <TextBlock x:Name="Others_PMH" Text="عادات اجتماعية أخرى"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FF5D5D61"/>
+                        <CheckBox x:Name="Others_You" VerticalAlignment="Center" Margin="42,0,0,0" Style="{DynamicResource ShowHidePassCheckBoxStyle}" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <!-- Create DataView From Patient and SessionTable in Row3-->
+            <DataGrid Grid.Row="2" x:Name="DataGv_PMedicalH" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Single" Style="{DynamicResource DataGridStyle}" MouseDoubleClick="DataGv_PMedicalH_MouseDoubleClick" Margin="0,10,0,0">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Width="150"  Header="رقم السجل" Binding="{Binding SessionId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="150"  Header="تاريخ الجلسة" Binding="{Binding Path=SessionDate , StringFormat='dd-MM-yyyy'}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="150"  Header="رقم الجلسة"  Binding="{Binding SessionNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="رقم سجل التاريخ المرضي السابق"  Binding="{Binding PastMedicalHistoryId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="أمراض بالدم والسيولة"  Binding="{Binding BleedingDisorders}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="ارتفاع ضغط الدم"  Binding="{Binding Hypertension}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="أمراض القلب"  Binding="{Binding CardiacDiseases}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="مرض السكري"  Binding="{Binding Diabetes}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الالتهاب الكبدي"  Binding="{Binding HepAtitis}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الإيدز"  Binding="{Binding Aids}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الجلطات الدماغية"  Binding="{Binding Cva}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الدرن"  Binding="{Binding Tb}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="الصرع"  Binding="{Binding Epilepsy}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="أمراض بالكلى"  Binding="{Binding KidneyDiseases}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="أمراض نفسية"  Binding="{Binding PsychiatricDiseases}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="السرطان"  Binding="{Binding Cancer}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="فقر الدم أو الأنيميا"  Binding="{Binding Anemia}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="100"  Header="التدخين"  Binding="{Binding Smoking}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="*"  Header="أخرى"  Binding="{Binding Others}" Foreground="#FF5D5D61"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <!-- Disclaimer Form View-->
+        <Grid   x:Name="Accept_FormContent" Visibility="Hidden"  Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition  Height="auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- Headerin Row 0-->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" >
+                <TextBlock Text="معلومات المريض:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <StackPanel   Orientation="Horizontal"   HorizontalAlignment="Stretch" Margin="0,0,0,0">
+                    <TextBlock   Text="رقم الملف" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="DiscFormFileNumField"  Foreground="Black" Padding="0,5" Margin="5,0,0,0" Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,0"  HorizontalAlignment="Stretch">
+                    <TextBlock   Text="رقم الجلسة" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="DiscFormSNumField"  FlowDirection="RightToLeft" Margin="5,0,0,0"  Foreground="Black"   Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" Margin="0,0"  HorizontalAlignment="Stretch">
+                    <TextBlock   Text="رقم السجل" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="#FF5D5D61" Padding="3,0,0,0"/>
+                    <TextBox Width="160" IsReadOnly="True" Height="24" x:Name="DiscFormNumField"  FlowDirection="RightToLeft" Margin="5,0,0,0" Foreground="Black"  Style="{DynamicResource TextBoxStyle}"/>
+                </StackPanel>
+            </StackPanel>
+            <!--Row 1 -->
+            <Grid Grid.Row="1" x:Name="DisclaimerForm_Content" FlowDirection="RightToLeft">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!-- Buttons in Col 1-->
+                <StackPanel Grid.Column="1"  Orientation="Vertical" Margin="0,10,0,0">
+                    <Button x:Name="AddButton_DiscForm" IsEnabled="False"  Content="اضافة"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="AddButton_DiscForm_Click"/>
+                    <Button x:Name="DeleteButton_DiscForm" IsEnabled="False"  Content="حذف"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="DeleteButton_DiscForm_Click"/>
+                    <Button x:Name="Print_DiscForm" Visibility="Hidden"  Content="طباعة"  FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Height="40" MaxWidth="250"  Margin="3" BorderBrush="#76B82A" Background="{x:Null}"  Style="{DynamicResource ButtonStyle}" Click="Print_DiscForm_Click"/>
+                </StackPanel>
+                <!-- Body in Row1 col0-->
+                <StackPanel Orientation="Vertical">
+                        <TextBlock Text="موافقة/ اخلاء مسؤولية " FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Foreground="#FF5D5D61" Margin="0,10,0,5"/>
+                    <TextBlock Text="أنا الموقع أدناه:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,0,5"/>
+                    <TextBlock Text="بهذا أفوض و أوافق على أن تجرى لي الحجامة من قبل أو تحت  اشراف طبيب المركز      د.  " FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,0,5"/>
+                    <TextBlock Text="وقد أوضح لي الطبيب مرضي ومعالجته ، والمعالجة البديلة (إن وجدت) وطبيعتها والمخاطر "   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,0,5"/>
+                    <TextBlock Text="المتعلقة بها وإني أدرك أنه ليس بإمكان الطبيب أو المنشأة الصحية ضمان أي نتائج للمعالجة"   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,0,5"/>
+                    <TextBlock Text=" كذلك أعلم بأن لدي القدرة لوقف جلسة العلاج في أي وقت ،كما أعطي الحق في استخدام "   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,0,5"/>
+                    <TextBlock Text=" البيانات الطبية لحالتي لغرض الاحصاءات ."   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="التوقيع:"   FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,10,0,10"/>
+                        <TextBlock Text="البصمة :"  Width="60" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="270,10,0,10" VerticalAlignment="Center"/>
+                        <Image x:Name="PrintImg" Width="200" Visibility="Visible" Margin="0,10,0,10"/>
+                    </StackPanel>
+                    <TextBlock Text="توقيع الطبيب مؤكداً الحصول على موافقة المريض على الخضوع للمعالجة المذكورة أعلاه :" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="الاسم:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16"/>
+                        <TextBlock Text="التوقيع:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="190,0,0,0"/>
+                        <TextBlock Text="التاريخ:" FontFamily="/HijamaClinicManagement;component/Resources/Font/#Almarai" FontSize="16" Margin="190,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <!-- Create DataView From Patient and SessionTable in Row3-->
+            <DataGrid Grid.Row="2" x:Name="DataGv_DiscForm" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Single" 
+                Style="{DynamicResource DataGridStyle}" MouseDoubleClick="DataGv_DiscForm_MouseDoubleClick" Margin="0,15,0,0">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#61CE70"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Width="150"  Header="رقم السجل" Binding="{Binding SessionId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="150"  Header="تاريخ الجلسة" Binding="{Binding Path=SessionDate , StringFormat='dd-MM-yyyy'}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="150"  Header="رقم الجلسة"  Binding="{Binding SessionNum}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="150"  Header="رقم سجل نموذج الموافقة المستنيرة"  Binding="{Binding DisclaimerFormId}" Foreground="#FF5D5D61"/>
+                    <DataGridTextColumn  Width="*"  Header="البصمة"  Binding="{Binding PrintImg}" Foreground="#FF5D5D61"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        
+    </Grid>
+</UserControl>

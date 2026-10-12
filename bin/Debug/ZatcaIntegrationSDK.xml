@@ -1,0 +1,1135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZatcaIntegrationSDK</name>
+    </assembly>
+    <members>
+        <member name="F:ZatcaIntegrationSDK.AccountingCustomerParty.partyIdentification">
+            <summary>
+            معرف أضافى بيانات للمشترى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingCustomerParty.postalAddress">
+            <summary>
+            تفاصيل العنوان الوطنى بيانات المشترى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingCustomerParty.partyLegalEntity">
+            <summary>
+            أسم المؤسسة المشترى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingCustomerParty.partyTaxScheme">
+            <summary>
+            بيانات رقم التسجيل الضريبيى المشترى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingCustomerParty.contact">
+            <summary>
+            بيانات أخرى للمشترى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingSupplierParty.partyIdentification">
+            <summary>
+            معرف أضافى بيانات البائع 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingSupplierParty.postalAddress">
+            <summary>
+            تفاصيل العنوان الوطنى بيانات البائع 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingSupplierParty.partyLegalEntity">
+            <summary>
+            أسم المؤسسة البائع 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AccountingSupplierParty.partyTaxScheme">
+            <summary>
+            بيانات رقم التسجيل الضريبيى البائع 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.AllowanceCharge.ChargeIndicator">
+            <summary>
+            المعامل الذى يحدد اذا كان خصم او رسوم
+            
+            فى حالة الخصم False
+            
+            فى حالة الرسوم True
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.AllowanceCharge.MultiplierFactorNumeric">
+            <summary>
+            نسبة الخصم أو الرسوم 
+            
+            عند كتابة النسبة اكبر من صفر يجب كتابة BaseAmount
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.AllowanceCharge.Amount">
+            <summary>
+            مبلغ الخصم أو الرسوم 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.AllowanceCharge.AllowanceChargeReason">
+            <summary>
+            سبب الخصم أو الرسوم 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.AllowanceCharge.AllowanceChargeReasonCode">
+            <summary>
+            كود الخصم او الرسوم 
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.AllowanceCharge.taxCategory">
+            <summary>
+            تحديد كود الضريبة التى سوف يتم عمل الخصم او الرسوم عليها   
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.BLL.ApiRequestLogic.mode">
+            <summary>
+            create api url According Mode choose   
+            Mode.developer     only for developers
+            
+            Mode.Simulation     only for Simulation
+            
+            Mode.Production     only for live mode
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.BLL.ApiRequestLogic.SaveXML">
+            <summary>
+            true if need to save Cleared invoice as xml file   
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.BLL.ApiRequestLogic.Directorypath">
+            <summary>
+            directory to save cleared invoice xml file  
+            </summary>
+        </member>
+        <member name="M:ZatcaIntegrationSDK.BLL.ApiRequestLogic.#ctor(ZatcaIntegrationSDK.APIHelper.Mode,System.String,System.Boolean)">
+            <summary>
+            Class for all needed api calls  .
+            </summary>
+            <param name="_mode">environment for sending (developer-simulation-production) .</param>
+            <param name="_Directorypath">physical Directory in server to save cleared invoice xml .</param>
+            <param name="savexml">true when need to save cleared invoice xml as a file .</param>
+        </member>
+        <member name="M:ZatcaIntegrationSDK.BLL.ApiRequestLogic.CallReportingAPI(System.String,System.String,ZatcaIntegrationSDK.HelperContracts.InvoiceReportingRequest)">
+            <summary>
+            api for sending simplified invoices (b2c) to zatca api .
+            
+            ارسال الفاتورة المبسطة 
+            </summary>
+            <param name="userName">publickey with base64 format(binarySecurityToken)</param>
+            <param name="password">SecretKey as password .</param>
+            <param name="inv">XML Data (EncodedInvoice-InvoiceHash-UUID)</param>
+            <returns>
+            InvoiceReportingResponse object with InvoiceReportingResponse.IsSuccess=true if the invoice is accepted from zatca .
+            uuid example 8EC0C2F3-1998-43D2-A393-6958FF67B691
+            if IsSuccess=false Read InvoiceReportingResponse.ErrorMessage
+            </returns>
+        </member>
+        <member name="M:ZatcaIntegrationSDK.BLL.ApiRequestLogic.CallClearanceAPI(System.String,System.String,ZatcaIntegrationSDK.HelperContracts.InvoiceReportingRequest)">
+            <summary>
+            api for sending standared invoices (b2b) to zatca api .
+            
+            ارسال الفاتورة الضريبية 
+            </summary>
+            <param name="userName">publickey with base64 format(binarySecurityToken)</param>
+            <param name="password">SecretKey as password .</param>
+            <param name="inv">XML Data (EncodedInvoice-InvoiceHash-UUID)</param>
+            <returns>
+            InvoiceClearanceResponse object with InvoiceClearanceResponse.IsSuccess=true if the invoice is accepted from zatca .
+            uuid example 8EC0C2F3-1998-43D2-A393-6958FF67B691
+            if IsSuccess=false Read InvoiceClearanceResponse.ErrorMessage
+            </returns>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.CreditDebitReason.VATChange">
+             <summary>
+            تغيير أو تعديل أساسي في التوريدات مما يؤدي إلى تغيير الضريبة على القيمة المضافة المستحقة
+             </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.CreditDebitReason.CANCELLATION_OR_TERMINATION">
+            <summary>
+            إلغاء أو تعليق التوريدات بعد حدوثها كلياً أو جزئياً
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.CreditDebitReason.ChangeSupplyValue">
+            <summary>
+            تعديل قيمة التوريد التي تم الاتفاق عليها مسبقاً بين المورد والمشتري
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.CreditDebitReason.ReturnItems">
+            <summary>
+            إرجاع السلع أو الخدمات
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.CreditDebitReason.ChangeBuyerSellerInformation">
+            <summary>
+            التعديل على بيانات المورد أو المشتري
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.SendingStatus">
+            <summary>
+            حالة المشاركة بالنسبة للفاتورة المبسطة 
+            
+            REPORTED تم قبول الفاتورة
+            
+            NOT_REPORTED لم يتم قبول الفاتورة
+            حالة الاعتماد بالنسبة للفاتورة الضريبية 
+            
+            CLEARED تم قبول الفاتورة
+            
+            NOT_CLEARED لم يتم قبول الفاتورة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.ClearedInvoice">
+            <summary>
+            Cleared XML base64 format
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.QRCode">
+            <summary>
+            كيو ار كود بعد الاعتماد
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.SingedXML">
+            <summary>
+            Cleared XML PlainText
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.ErrorMessage">
+            <summary>
+            رسالة الخطأ 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.WarningMessage">
+            <summary>
+            رسالة التحذير 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.IsSuccess">
+            <summary>
+            true فى حالة ارسال الفاتورة بنجاح للزكاة والدخل 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.StatusCode">
+            <summary>
+            200 XML Accepted
+            -------
+            202 Accepted with warnings
+            ------
+            400 Bad request - must solve the error and create new xml
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.ClearedXMLFileName">
+            <summary>
+            اسم ملف xml المعتمد 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.ClearedXMLFileNameFullPath">
+            <summary>
+            مسار ملف xml بعد الاعتماد 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceResponse.ClearedXMLFileNameShortPath">
+            <summary>
+            مسار قصير ملف xml بعد الاعتماد 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.ClearanceStatus">
+            <summary>
+            حالة الاعتماد بالنسبة للفاتورة الضريبية 
+            
+            CLEARED تم قبول الفاتورة
+            
+            NOT_CLEARED لم يتم قبول الفاتورة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.ClearedInvoice">
+            <summary>
+            Cleared XML base64 format
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.QRCode">
+            <summary>
+            كيو ار كود بعد الاعتماد
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.SingedXML">
+            <summary>
+            Cleared XML PlainText
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.ErrorMessage">
+            <summary>
+            رسالة الخطأ 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.WarningMessage">
+            <summary>
+            رسالة التحذير 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.IsSuccess">
+            <summary>
+            true فى حالة ارسال الفاتورة بنجاح للزكاة والدخل 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.StatusCode">
+            <summary>
+            200 XML Accepted
+            -------
+            202 Accepted with warnings
+            ------
+            400 Bad request - must solve the error and create new xml
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.ClearedXMLFileName">
+            <summary>
+            اسم ملف xml المعتمد 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.ClearedXMLFileNameFullPath">
+            <summary>
+            مسار ملف xml بعد الاعتماد 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceClearanceResponse.ClearedXMLFileNameShortPath">
+            <summary>
+            مسار قصير ملف xml بعد الاعتماد 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingResponse.ReportingStatus">
+            <summary>
+            حالة المشاركة بالنسبة للفاتورة المبسطة 
+            
+            REPORTED تم قبول الفاتورة
+            
+            NOT_REPORTED لم يتم قبول الفاتورة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingResponse.ClearanceStatus">
+            <summary>
+            حالة الاعتماد بالنسبة للفاتورة الضريبية 
+            
+            CLEARED تم قبول الفاتورة
+            
+            NOT_CLEARED لم يتم قبول الفاتورة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingResponse.ErrorMessage">
+            <summary>
+            رسالة الخطأ 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingResponse.WarningMessage">
+            <summary>
+            رسالة التحذير 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingResponse.IsSuccess">
+            <summary>
+            true فى حالة ارسال الفاتورة بنجاح للزكاة والدخل 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingResponse.StatusCode">
+            <summary>
+            200 XML Accepted
+            -------
+            202 Accepted with warnings
+            ------
+            400 Bad request - must solve the error and create new xml
+            </summary>
+        </member>
+        <member name="T:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingRequest">
+            <summary>
+            Serialized InvoiceReportingRequest object = api json body
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingRequest.invoiceHash">
+            <summary>
+            InvoiceHash = Result.InvoiceHash
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingRequest.uuid">
+            <summary>
+            UUID = Result.UUID
+            example 8EC0C2F3-1998-43D2-A393-6958FF67B691
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.HelperContracts.InvoiceReportingRequest.invoice">
+            <summary>
+            EncodedInvoice (signed xml with base64 format= Result.EncodedInvoice)
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.InvoiceDocumentReference.ID">
+             <summary>
+            رقم الفاتورة المرتبط بها الأشعار IRN
+            
+             فى حالة اشعار دائن او مدين فقط
+             </summary>
+        </member>
+        <member name="T:ZatcaIntegrationSDK.APIHelper.Mode">
+            <summary>
+            create api url According Mode choose   
+            Mode.developer     only for developers
+            
+            Mode.Simulation     only for Simulation
+            
+            Mode.Production     only for live mode
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.BillingReference.invoiceDocumentReferences">
+             <summary>
+             قائمة ببيانات الفواتير المرتبط بها الأشعار
+            
+             فى حالة اشعار دائن او مدين فقط
+             </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.ClassifiedTaxCategory.ID">
+            <summary>
+            كود الضريبة  
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.ClassifiedTaxCategory.Percent">
+            <summary>
+            نسبة الضريبة مثال 15 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.ContractDocumentReference.ID">
+            <summary>
+            رقم العقد 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Country.IdentificationCode">
+            <summary>
+            كود الدولة  
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.CSIDInfo.CertPem">
+            <summary>
+            المفتاح العام publickey  - CSID
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.CSIDInfo.CSR">
+            <summary>
+            طلب انشاء المفتاح العام 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.CSIDInfo.PrivateKey">
+            <summary>
+            المفتاح الخاص
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.CSIDInfo.Secret">
+            <summary>
+            الباسورد 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Delivery.ActualDeliveryDate">
+            <summary>
+            بداية تاريخ التوريد
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Delivery.LatestDeliveryDate">
+            <summary>
+            آخر تاريخ التوريد
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.DocumentReference.ID">
+            <summary>
+            رقم فاتورة الدفعة المقدمة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.DocumentReference.UUID">
+            <summary>
+            UUID الخاص بفاتورة الدفعة المقدمة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.DocumentReference.IssueDate">
+            <summary>
+            تاريخ فاتورة الدفعة المقدمة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.DocumentReference.IssueTime">
+            <summary>
+            وقت فاتورة الدفعة المقدمة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.DocumentReference.DocumentTypeCode">
+            <summary>
+            386 كود الدفعة المقدمة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.Operation">
+            <summary>
+            اسم العملية 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.IsValid">
+            <summary>
+             نتيجة العملية ناجحة او ليست ناجحة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.ErrorMessage">
+            <summary>
+             رسالة الخطأ
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.WarningMessage">
+            <summary>
+             رسالة التحذير
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.ResultedValue">
+            <summary>
+             اسم ملف xml بعد التوقيع
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.lstSteps">
+            <summary>
+             خطوات انشاء xml
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.SingedXML">
+            <summary>
+             XML بعد التوقيع
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.SingedXMLFileName">
+            <summary>
+             اسم ملف xml بعد التوقيع
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.SingedXMLFileNameFullPath">
+            <summary>
+             مسار ملف xml بعد التوقيع
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.InvoiceHash">
+            <summary>
+             الهاش الخاص بالفاتورة الحالية
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.UUID">
+            <summary>
+             معرف UUID للفاتورة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.EncodedInvoice">
+            <summary>
+             XML with Base64 format
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.PIH">
+            <summary>
+             هاش الفاتورة السابقة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.QRCode">
+            <summary>
+             كيو ار كود الفاتورة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.LineExtensionAmount">
+            <summary>
+             أجمالى الاصناف فى الفاتورة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.TaxExclusiveAmount">
+            <summary>
+             اجمالى الفاتورة الخاضع للضريبة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.TaxInclusiveAmount">
+            <summary>
+             أجمالى الفاتورة بعد الضريبة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.AllowanceTotalAmount">
+            <summary>
+              مبلغ الخصومات على مستوى الفاتورة فقط
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.ChargeTotalAmount">
+            <summary>
+              مبلغ الرسوم على مستوى الفاتورة فقط
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.PayableAmount">
+            <summary>
+             المبلغ المطلوب دفعة من العميل
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.PrepaidAmount">
+            <summary>
+             مبلغ الدفعات المقدمة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.TaxAmount">
+            <summary>
+             مبلغ الضريبة على الفاتورة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.PayableRoundingAmount">
+            <summary>
+             مبلغ التقريب
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.SingedXMLFileNameShortPath">
+            <summary>
+             مسار مبسط لملف xml على السيرفر
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.NormalXMLFileNameFullPath">
+            <summary>
+             مسار ملف xml قبل التوقيع
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Result.NormalXMLFileNameShortPath">
+            <summary>
+             مسار مبسط للملف xml قبل التوقيع
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.ProfileID">
+            <summary>
+            must be reporting:1.0 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.ID">
+            <summary>
+            رقم الفاتورة الداخلى فى النظام 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.UUID">
+            <summary>
+            GUID معرف عالمى فريد
+            example 8EC0C2F3-1998-43D2-A393-6958FF67B691
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.IssueDate">
+            <summary>
+            تاريخ الفاتورة بصيغة "yyyy-MM-dd"
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.IssueTime">
+            <summary>
+            وقت الفاتورة بصيغة "HH-mm-ss"
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.Note">
+             <summary>
+            ملاحظات اختيارى
+             
+             </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.DocumentCurrencyCode">
+            <summary>
+            كود العملة للفاتورة 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.TaxCurrencyCode">
+            <summary>
+            كود العملة للضريبة ودائما تكون SAR 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.LineCountNumeric">
+            <summary>
+            عدد اسطر الفاتورة 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.orderReference">
+            <summary>
+            بيانات الطلب أختيارى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.billingReference">
+             <summary>
+             بيانات الفاتورة المرتبط بها الأشعار
+            
+             فى حالة اشعار دائن او مدين فقط
+             </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.contractDocumentReference">
+            <summary>
+            بيانات العقود أن وجدت 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.AdditionalDocumentReferenceICV">
+            <summary>
+            بيانات عداد الفاتورة بالنسبة لل CSID
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.AdditionalDocumentReferencePIH">
+            <summary>
+            بيانات الهاش من الفاتورة السابقة  
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.AdditionalDocumentReferenceQR">
+            <summary>
+            بيانات الكيو آر 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.SupplierParty">
+            <summary>
+            بيانات البائع 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.CustomerParty">
+            <summary>
+            بيانات المشترى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.delivery">
+            <summary>
+            بيانات تاريخ التوريد 
+            
+            أجبارى فى حالة فاتورة مبسطة وفاتورة ملخصة
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.paymentmeans">
+            <summary>
+            طرق الدفع
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.TaxTotal">
+            <summary>
+            الضريبة
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.allowanceCharges">
+            <summary>
+            الخصومات أو الرسوم 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.legalMonetaryTotal">
+            <summary>
+            أجماليات الفاتورة
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.InvoiceLines">
+            <summary>
+            أسطر الفاتورة 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Invoice.cSIDInfo">
+            <summary>
+            بيانات التوقيع CSID 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.CurrencyRate">
+            <summary>
+            معدل تحويل العملة بالنسبة للريال السعودى
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Invoice.TaxPointDate">
+            <summary>
+            تاريخ امر الدفع للفواتير التى تصدر للجهات الحكومية "yyyy-MM-dd"
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.InvoiceLine.ID">
+            <summary>
+            رقم السطر فى الفاتورة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.InvoiceLine.InvoiceQuantity">
+            <summary>
+            الكمية 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.InvoiceLine.LineExtensionAmount">
+            <summary>
+            مبلغ سطر الفاتورة قبل الضريبة 
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.InvoiceLine.allowanceCharges">
+            <summary>
+            بيانات الخصومات أو الرسوم على مستوى سطر الفاتورة 
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.InvoiceLine.taxTotal">
+            <summary>
+            بيانات الضريبة على مستوى سطر الفاتورة 
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.InvoiceLine.item">
+            <summary>
+            بيانات الصنف 
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.InvoiceLine.price">
+            <summary>
+            بيانات السعر 
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.InvoiceLine.documentReferences">
+            <summary>
+            بيانات الدفعات المقدمة ان وجدت 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.InvoiceTypeCode.id">
+            <summary>
+            كود نوع الملف (فاتورة - أشعار دائن - أشعار مدين)
+            
+            الأنواع المتاحة:
+            
+            - فاتورة ضريبية أو مبسطة: 388
+            - إشعار مدين: 383
+            - إشعار دائن: 381
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.InvoiceTypeCode.Name">
+             <summary>
+             الكود الممثل لنوع الفاتورة بناءً على التنسيق NNPNESB
+             
+             NN:
+             - 01 للفاتورة الضريبية
+             - 02 للفاتورة الضريبية المبسطة
+            
+             P:
+             - في حالة فاتورة لطرف ثالث نكتب 1، وفي الحالة الأخرى نكتب 0
+            
+             N:
+             - في حالة فاتورة اسمية نكتب 1، وفي الحالة الأخرى نكتب 0
+            
+             E:
+             - في حالة فاتورة للصادرات نكتب 1، وفي الحالة الأخرى نكتب 0
+            
+             S:
+             - في حالة فاتورة ملخصة نكتب 1، وفي الحالة الأخرى نكتب 0
+            
+             B:
+             - في حالة فاتورة ذاتية نكتب 1
+             - إذا كانت الفاتورة صادرات = 1، لا يمكن أن تكون الفاتورة ذاتية = 1
+             </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Item.Name">
+            <summary>
+            أسم الصنف 
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.Item.classifiedTaxCategory">
+            <summary>
+            الضريبة الخاضع لها الصنف 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Item.BuyersItemIdentificationID">
+            <summary>
+            كود الصنف بالنسبة للمشترى 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Item.SellersItemIdentificationID">
+            <summary>
+            كود الصنف بالنسبة للبائع 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Item.StandardItemIdentificationID">
+            <summary>
+            الكود الخاص بالصنف  
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.LineExtensionAmount">
+            <summary>
+            أجمالى الاصناف فى الفاتورة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.TaxExclusiveAmount">
+            <summary>
+            أجمالى الفاتورة قبل الضريبة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.TaxInclusiveAmount">
+            <summary>
+            أجمالى الفاتورة شامل الضريبة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.AllowanceTotalAmount">
+            <summary>
+            مبلغ الخصم على مستوى الفاتورة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.ChargeTotalAmount">
+            <summary>
+            مبلغ الرسوم على مستوى الفاتورة 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.PayableAmount">
+            <summary>
+            المبلغ المدفوع 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.PrepaidAmount">
+            <summary>
+            مبلغ الدفعات المدفوعة مقدما 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.LegalMonetaryTotal.PayableRoundingAmount">
+            <summary>
+            التقريب  
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.OrderReference.ID">
+            <summary>
+            معرف أمر الشراء المرتبط.
+            
+            يمثل رقم أمر الشراء الخاص بالطلب، وهو حقل اختياري.
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PartyIdentification.ID">
+            <summary>
+            رقم المعرف الخاص بالطرف.
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PartyIdentification.schemeID">
+            <summary>
+            عند إدخال الرقم التعريفي، يجب إدخال الرمز الخاص به.
+            
+            الأنواع المتاحة:
+            - CRN: رقم التسجيل التجاري
+            - MOM: وزارة الشؤون البلدية والقروية والإسكان
+            - MLS: وزارة العمل والتنمية الاجتماعية
+            - SAG: التراخيص الاستثمارية
+            - OTH: أي شيء آخر
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PartyLegalEntity.RegistrationName">
+            <summary>
+            أسم المؤسسة  
+            
+            أجبارى فى بيانات البائع
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PartyLegalEntity.CompanyLegalForm">
+            <summary>
+            اذا كان المشترى مؤسسة حكومية تكون GOV  
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PartyTaxScheme.CompanyID">
+            <summary>
+            الرقم الضريبيى ويجب ان يكون 15 رقم يبدأ برقم 3 وينتهى برقم 3 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PaymentMeans.PaymentMeansCode">
+            <summary>
+            Code Description
+            10 In cash
+            30 Credit
+            42 Payment to bank account
+            48 Bank card
+            1 Instrument not defined(Free text)
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PaymentMeans.InstructionNote">
+            <summary>
+            فى حالة كان اشعار دائن او مدين لابد من ادخال الملاحظات
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.PaymentMeans.payeefinancialaccount">
+            <summary>
+             فى حالة كان الدفع من خلال credit
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.StreetName">
+            <summary>
+            اسم الشارع (أجبارى) 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.AdditionalStreetName">
+            <summary>
+            اسم شارع اضافى (اختيارى) 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.BuildingNumber">
+            <summary>
+            رقم المبنى أجبارى ولابد يكون 4 ارقام فقط 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.PlotIdentification">
+            <summary>
+            رقم القطعة أختيارى ولابد يكون 4 ارقام فقط أن وجد 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.CityName">
+            <summary>
+            أسم المدينة أجبارى 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.PostalZone">
+            <summary>
+            الرمز البريدى أجبارى ولابد يكون 5 ارقام فقط 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.CountrySubentity">
+            <summary>
+            أسم المحافظة أو القطاع أختيارى 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.PostalAddress.CitySubdivisionName">
+            <summary>
+            اسم الحى اختيارى 
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.PostalAddress.country">
+            <summary>
+            الدولة أجبارى SA فى بيانات البائع 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Price.PriceAmount">
+            <summary>
+            سعر الصنف 
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Price.BaseQuantity">
+            <summary>
+             LineExtensionAmount=(PriceAmount/BaseQuantity)*InvoicedQuantity
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.Price.EncludingVat">
+            <summary>
+            سعر الصنف شامل الضريبة True
+            
+            سعر الصنف قبل الضريبة False
+            </summary>
+        </member>
+        <member name="M:ZatcaIntegrationSDK.PUREUBLXML.GenerateInvoiceXML(ZatcaIntegrationSDK.Invoice,System.String,System.Boolean)">
+            <summary>
+            Generate Invoice As UBL XML with Zatca Standared Rules .
+            
+            and return all needed xml data to save into database and send to Zatca
+            </summary>
+            <param name="inv">All needed Invoice Data from Sales Invoice Solution .</param>
+            <param name="Directorypath">physical Directory in server to save xml .</param>
+            <param name="savexml">true when need to save xml as a file .</param>
+            <returns>
+            Result object with Result.IsValid=true if the invoice xml created successfully .
+            
+            if IsValid=false Read Result.ErrorMessage
+            </returns>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxCategory.ID">
+            <summary>
+            S means standard rated ضريبة القيمة المضافة
+            Z means Zero rated ضريبة صفرية
+            E means Exempt from vat معفى من الضريبة
+            O means Not Subject to VAT غير خاضع للضريبة
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxCategory.Percent">
+            <summary>
+            نسبة الضريبة
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxCategory.TaxExemptionReason">
+            <summary>
+             سبب الأعفاء
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxCategory.TaxExemptionReasonCode">
+            <summary>
+            كود سبب الاعفاء
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxSubtotal.TaxableAmount">
+            <summary>
+            المبلغ الخاضع للضريبة
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxSubtotal.TaxAmount">
+            <summary>
+            مبلغ الضريبة
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.TaxSubtotal.taxCategory">
+            <summary>
+            فئة الضريبة 
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxTotal.TaxAmount">
+            <summary>
+            مبلغ الضريبة
+            
+            </summary>
+        </member>
+        <member name="P:ZatcaIntegrationSDK.TaxTotal.RoundingAmount">
+            <summary>
+            المبلغ شامل الضريبة
+            
+            </summary>
+        </member>
+        <member name="F:ZatcaIntegrationSDK.TaxTotal.TaxSubtotal">
+            <summary>
+            تفاصيل الضريبة
+            
+            </summary>
+        </member>
+        <member name="M:ZatcaIntegrationSDK.UBLXML.GenerateInvoiceXML(ZatcaIntegrationSDK.Invoice,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Generate Invoice As UBL XML with Zatca Standared Rules .
+            
+            and return all needed xml data to save into database and send to Zatca
+            </summary>
+            <param name="inv">All needed Invoice Data from Sales Invoice Solution .</param>
+            <param name="Directorypath">physical Directory in server to save xml .</param>
+            <param name="savexml">true when need to save xml as a file .</param>
+            <param name="validatexml">true when need to check validation of xml according ZATCA rules .</param>
+            <returns>
+            Result object with Result.IsValid=true if the invoice xml created successfully .
+            
+            if IsValid=false Read Result.ErrorMessage
+            </returns>
+        </member>
+    </members>
+</doc>

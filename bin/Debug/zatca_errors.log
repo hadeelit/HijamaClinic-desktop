@@ -1,0 +1,171 @@
+[09/11/2025 05:10:55 م] GetComplianceCSID: فشل الحصول على CSID: {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 87[10/11/2025 08:57:47 م] GetComplianceCSID: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 106
+
+[10/11/2025 09:18:48 م] GetComplianceCSID: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 106
+
+[10/11/2025 09:19:18 م] GetComplianceCSID: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 106
+
+[10/11/2025 09:21:06 م] GetComplianceCSID: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 106
+
+[10/11/2025 09:21:25 م] GetComplianceCSID: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 106
+
+[13/11/2025 03:11:31 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 103
+
+[13/11/2025 03:12:05 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 103
+
+[13/11/2025 03:12:51 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 103
+
+[13/11/2025 03:13:30 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 103
+
+[13/11/2025 04:37:34 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 103
+
+[13/11/2025 04:42:19 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 103
+
+[13/11/2025 04:45:44 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 103
+
+[13/11/2025 04:59:56 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[13/11/2025 05:09:18 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[13/11/2025 05:10:23 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[13/11/2025 05:12:57 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 90
+
+[13/11/2025 05:13:53 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 90
+
+[13/11/2025 05:16:45 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[13/11/2025 05:17:07 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[13/11/2025 05:17:22 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[13/11/2025 05:19:48 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[13/11/2025 05:20:06 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[16/11/2025 02:02:44 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[16/11/2025 02:07:26 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[16/11/2025 02:08:03 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[16/11/2025 02:08:32 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[16/11/2025 02:13:32 م] GetComplianceCSID: فشل الحصول على شهادة التوافق (NotFound): {"httpCode":"404","httpMessage":"Not Found","moreInformation":"The requested URL was not found on this server"}
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 110
+
+[16/11/2025 02:27:37 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 107
+
+[16/11/2025 02:28:34 م] GetComplianceCSID: An error occurred while sending the request.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at HijamaClinicManagement.Zatca_Bill.Services.ZatcaAPIClient.<GetComplianceCSID>d__5.MoveNext() in C:\My Contents\Lamsatshifaa\lamsatshifaa programming content\lamsatshifaa programming content\Cupping App\HijamaClinicManagement\HijamaClinicManagement\Zatca Bill\Services\ZatcaAPIClient.cs:line 107
+
